@@ -40,7 +40,7 @@
 				<RotateAnimationTowardsMovement>false</RotateAnimationTowardsMovement>
 				<RotateAnimationVertically>false</RotateAnimationVertically>
 				<VelocityCode Class="CodeUnitValue">
-					<Code><![CDATA[0.5]]></Code>
+					<Code><![CDATA[0]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
 				<PhysicalLength Class="CodeUnitValue">
@@ -63,8 +63,8 @@
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</StepDurationCode>
 					<SpaceType>CONTINUOUS</SpaceType>
-					<WidthCode><![CDATA[10]]></WidthCode>
-					<HeightCode><![CDATA[10]]></HeightCode>
+					<WidthCode><![CDATA[100]]></WidthCode>
+					<HeightCode><![CDATA[100]]></HeightCode>
 					<ZHeightCode><![CDATA[0]]></ZHeightCode>
 					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
 					<RowsCountCode><![CDATA[100]]></RowsCountCode>
@@ -138,7 +138,7 @@
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
 						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[0]]></Code>
+							<Code><![CDATA[100]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 						</Rate>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
@@ -233,13 +233,6 @@
 						<Name><![CDATA[averageMoney]]></Name>
 						<Type>average</Type>
 						<Expression><![CDATA[item.money]]></Expression>
-						<Condition><![CDATA[]]></Condition>
-					</StatisticsItem>
-					<StatisticsItem>
-						<Id>1650559042525</Id>
-						<Name><![CDATA[nVisitors]]></Name>
-						<Type>count</Type>
-						<Expression><![CDATA[]]></Expression>
 						<Condition><![CDATA[]]></Condition>
 					</StatisticsItem>
 					<StatisticsItem>
@@ -646,9 +639,171 @@
 						</Item>	
 					</ParameterToDatabaseColumnMapping>
 				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1653295703663</Id>
+					<Name><![CDATA[benches]]></Name>
+					<X>270</X><Y>-20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1653295703664</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[lunapark]]></PackageName>
+						<ClassName><![CDATA[Bench]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[lunapark]]></PackageName>
+							<ClassName><![CDATA[Bench]]></ClassName>
+							<ItemName><![CDATA[1653295703522]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[number]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>true</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[10]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InEnvironment>true</InEnvironment>	
+					<InitialSpeedCode Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+					</InitialSpeedCode>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>LOAD_FROM_DATABASE</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+							<PackageName><![CDATA[lunapark]]></PackageName>
+							<ClassName><![CDATA[benches]]></ClassName>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+					<ParameterToDatabaseColumnMapping>
+						<Item>
+							<Key>
+								FAKE_PARAMETER_LOCATION_X_xjal
+							</Key>
+							<Value>
+								<PackageName><![CDATA[lunapark]]></PackageName>
+								<ClassName><![CDATA[benches]]></ClassName>
+								<ItemName><![CDATA[x]]></ItemName>
+							</Value>
+						</Item>
+						<Item>
+							<Key>
+								FAKE_PARAMETER_LOCATION_Y_xjal
+							</Key>
+							<Value>
+								<PackageName><![CDATA[lunapark]]></PackageName>
+								<ClassName><![CDATA[benches]]></ClassName>
+								<ItemName><![CDATA[y]]></ItemName>
+							</Value>
+						</Item>
+						<Item>
+							<Key>
+								<PackageName><![CDATA[lunapark]]></PackageName>
+								<ClassName><![CDATA[Bench]]></ClassName>
+								<ItemName><![CDATA[number]]></ItemName>
+							</Key>
+							<Value>
+								<PackageName><![CDATA[lunapark]]></PackageName>
+								<ClassName><![CDATA[benches]]></ClassName>
+								<ItemName><![CDATA[number]]></ItemName>
+							</Value>
+						</Item>	
+					</ParameterToDatabaseColumnMapping>
+				</EmbeddedObject>
 			</EmbeddedObjects>
 
 			<Presentation>
+				<EmbeddedObjectPresentation>
+					<Id>1653295703664</Id>
+					<Name><![CDATA[benches_presentation]]></Name>
+					<X>370</X><Y>-20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1652687998772</Id>
+					<Name><![CDATA[rides_presentation]]></Name>
+					<X>370</X><Y>-60</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+				<EmbeddedObjectPresentation>
+					<Id>1652625637648</Id>
+					<Name><![CDATA[stalls_presentation]]></Name>
+					<X>370</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
+					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
 				<Level>
 					<Id>1650470258899</Id>
 					<Name><![CDATA[level]]></Name>
@@ -755,16 +910,6 @@
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
 					<DatasetExpression>  
-						<Title><![CDATA[nVisitors]]></Title>
-					<Id>0</Id>
-					<Expression><![CDATA[my_dataset4]]></Expression>
-					<Color>-14774017</Color>
-					<Expression2><![CDATA[visitors.nVisitors()]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<DatasetExpression>  
 						<Title><![CDATA[averageMoney]]></Title>
 					<Id>0</Id>
 					<Expression><![CDATA[my_dataset5]]></Expression>
@@ -785,50 +930,12 @@
 				<EmbeddedObjectPresentation>
 					<Id>1650471310165</Id>
 					<Name><![CDATA[visitors_presentation]]></Name>
-					<X>60</X><Y>30</Y>
+					<X>360</X><Y>-140</Y>
 					<Label><X>155</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
-					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-					<Latitude>0.0</Latitude>
-					<Longitude>0.0</Longitude>
-				</EmbeddedObjectPresentation>
-				<EmbeddedObjectPresentation>
-					<Id>1652625637648</Id>
-					<Name><![CDATA[stalls_presentation]]></Name>
-					<X>370</X><Y>-100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
-					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
-					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-					<Latitude>0.0</Latitude>
-					<Longitude>0.0</Longitude>
-				</EmbeddedObjectPresentation>
-				<EmbeddedObjectPresentation>
-					<Id>1652687998772</Id>
-					<Name><![CDATA[rides_presentation]]></Name>
-					<X>370</X><Y>-60</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
@@ -1032,7 +1139,7 @@
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
+							<DelimeterType>SEPARATOR</DelimeterType>
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
@@ -1100,214 +1207,6 @@
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1650613345513</Id>
-					<Name><![CDATA[CheckNeeds]]></Name>
-					<X>400</X><Y>-70</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="560" Height="370">
-						<FillColor/>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="FinalState" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650550413979</Id>
-					<Name><![CDATA[goHome]]></Name>
-					<X>830</X><Y>200</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Properties>	
-						<Action><![CDATA[main.nVisitorsLeft += 1;
-main.remove_visitors(this);]]></Action>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650613240939</Id>
-					<Name><![CDATA[CheckBathroom]]></Name>
-					<X>420</X><Y>150</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[shapeBody.setFillColor(plum)]]></EntryAction>
-						<FillColor>-2252579</FillColor>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650613232363</Id>
-					<Name><![CDATA[CheckFood]]></Name>
-					<X>420</X><Y>80</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[shapeBody.setFillColor(plum)]]></EntryAction>
-						<FillColor>-2252579</FillColor>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650613221008</Id>
-					<Name><![CDATA[CheckRest]]></Name>
-					<X>420</X><Y>10</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[shapeBody.setFillColor(plum)]]></EntryAction>
-						<FillColor>-2252579</FillColor>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="Branch" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650556295293</Id>
-					<Name><![CDATA[branch2]]></Name>
-					<X>790</X><Y>160</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Properties>	
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Branch" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650556291890</Id>
-					<Name><![CDATA[branch1]]></Name>
-					<X>790</X><Y>20</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Properties>	
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650556220147</Id>
-					<Name><![CDATA[NeedBathroom]]></Name>
-					<X>600</X><Y>150</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[shapeBody.setFillColor(red)]]></EntryAction>
-						<FillColor>-65536</FillColor>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650555986009</Id>
-					<Name><![CDATA[NeedRest]]></Name>
-					<X>600</X><Y>10</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[shapeBody.setFillColor(red)]]></EntryAction>
-						<FillColor>-65536</FillColor>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="Branch" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650550598422</Id>
-					<Name><![CDATA[branch]]></Name>
-					<X>790</X><Y>100</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Properties>	
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650550401523</Id>
-					<Name><![CDATA[NeedFood]]></Name>
-					<X>600</X><Y>80</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[shapeBody.setFillColor(red)]]></EntryAction>
-						<FillColor>-65536</FillColor>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650556548440</Id>
-					<Name><![CDATA[AtBathroom]]></Name>
-					<X>840</X><Y>150</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[shapeBody.setFillColor(yellow)]]></EntryAction>
-						<FillColor>-256</FillColor>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650556310435</Id>
-					<Name><![CDATA[SittingOnBench]]></Name>
-					<X>840</X><Y>10</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[shapeBody.setFillColor(yellow)]]></EntryAction>
-						<FillColor>-256</FillColor>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650550978590</Id>
-					<Name><![CDATA[BuyingFood]]></Name>
-					<X>840</X><Y>80</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[shapeBody.setFillColor(yellow)]]></EntryAction>
-						<FillColor>-256</FillColor>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="Branch" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650613444326</Id>
-					<Name><![CDATA[branch4]]></Name>
-					<X>560</X><Y>20</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Properties>	
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Branch" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650613551613</Id>
-					<Name><![CDATA[branch5]]></Name>
-					<X>560</X><Y>90</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Properties>	
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Branch" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650613554342</Id>
-					<Name><![CDATA[branch6]]></Name>
-					<X>560</X><Y>160</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Properties>	
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1650557192021</Id>
 					<Name><![CDATA[GoOnRide]]></Name>
 					<X>560</X><Y>370</Y>
@@ -1331,15 +1230,27 @@ selectedRide.enter.take(this);]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[shapeBody.setFillColor(lightBlue);
-this.moveToInTime(selectedRide, 10);]]></EntryAction>
+						<EntryAction><![CDATA[shapeBody.setFillColor(lightBlue);]]></EntryAction>
+						<ExitAction><![CDATA[moveToInTime(selectedRide, 50);]]></ExitAction>
 						<FillColor>-5383962</FillColor>
 					</Properties>
 				</StatechartElement>
-				<StatechartElement Class="State" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1653295382625</Id>
+					<Name><![CDATA[checkNeeds]]></Name>
+					<X>400</X><Y>-70</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="620" Height="350">
+						<FillColor/>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650616326246</Id>
 					<Name><![CDATA[IsGood]]></Name>
-					<X>840</X><Y>230</Y>
+					<X>900</X><Y>230</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1348,6 +1259,202 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<EntryAction><![CDATA[shapeBody.setFillColor(silver)]]></EntryAction>
 						<FillColor>-4144960</FillColor>
 					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="Branch" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650613554342</Id>
+					<Name><![CDATA[branch6]]></Name>
+					<X>590</X><Y>160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties>	
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Branch" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650613551613</Id>
+					<Name><![CDATA[branch5]]></Name>
+					<X>590</X><Y>90</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties>	
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Branch" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650613444326</Id>
+					<Name><![CDATA[branch4]]></Name>
+					<X>590</X><Y>20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties>	
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650550978590</Id>
+					<Name><![CDATA[BuyingFood]]></Name>
+					<X>900</X><Y>80</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<EntryAction><![CDATA[shapeBody.setFillColor(yellow)]]></EntryAction>
+						<FillColor>-256</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650556310435</Id>
+					<Name><![CDATA[SittingOnBench]]></Name>
+					<X>900</X><Y>10</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<EntryAction><![CDATA[shapeBody.setFillColor(yellow)]]></EntryAction>
+						<FillColor>-256</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650556548440</Id>
+					<Name><![CDATA[AtBathroom]]></Name>
+					<X>900</X><Y>150</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<EntryAction><![CDATA[shapeBody.setFillColor(yellow)]]></EntryAction>
+						<FillColor>-256</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650550401523</Id>
+					<Name><![CDATA[NeedFood]]></Name>
+					<X>660</X><Y>80</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<EntryAction><![CDATA[shapeBody.setFillColor(red)]]></EntryAction>
+						<FillColor>-65536</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="Branch" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650550598422</Id>
+					<Name><![CDATA[branch]]></Name>
+					<X>850</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties>	
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650555986009</Id>
+					<Name><![CDATA[NeedRest]]></Name>
+					<X>660</X><Y>10</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<EntryAction><![CDATA[shapeBody.setFillColor(red)]]></EntryAction>
+						<FillColor>-65536</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650556220147</Id>
+					<Name><![CDATA[NeedBathroom]]></Name>
+					<X>660</X><Y>150</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<EntryAction><![CDATA[shapeBody.setFillColor(red)]]></EntryAction>
+						<FillColor>-65536</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="Branch" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650556291890</Id>
+					<Name><![CDATA[branch1]]></Name>
+					<X>850</X><Y>20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties>	
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Branch" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650556295293</Id>
+					<Name><![CDATA[branch2]]></Name>
+					<X>850</X><Y>160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties>	
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650613221008</Id>
+					<Name><![CDATA[CheckRest]]></Name>
+					<X>420</X><Y>10</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<EntryAction><![CDATA[shapeBody.setFillColor(plum)]]></EntryAction>
+						<FillColor>-2252579</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650613232363</Id>
+					<Name><![CDATA[CheckFood]]></Name>
+					<X>420</X><Y>80</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<EntryAction><![CDATA[shapeBody.setFillColor(plum)]]></EntryAction>
+						<FillColor>-2252579</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650613240939</Id>
+					<Name><![CDATA[CheckBathroom]]></Name>
+					<X>420</X><Y>150</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="30">
+						<EntryAction><![CDATA[shapeBody.setFillColor(plum)]]></EntryAction>
+						<FillColor>-2252579</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="FinalState" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1650550413979</Id>
+					<Name><![CDATA[goHome]]></Name>
+					<X>880</X><Y>210</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Properties>	
+						<Action><![CDATA[main.nVisitorsLeft += 1;
+main.remove_visitors(this);]]></Action>
+					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 					<Id>1650550387877</Id>
@@ -1364,10 +1471,10 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 					<Properties Target="1650550391174">
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650550617938</Id>
 					<Name><![CDATA[doIhaveEnoughMoney]]></Name>
-					<X>700</X><Y>100</Y>
+					<X>760</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1382,7 +1489,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[this.buyFood()]]></Condition>
+						<Condition><![CDATA[true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -1394,17 +1501,19 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650550908545</Id>
 					<Name><![CDATA[transition2]]></Name>
-					<X>790</X><Y>110</Y>
+					<X>850</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>36.75089227157241</X><Y>82.68950761103795</Y></Point>
+						<Point><X>0</X><Y>10</Y></Point>
+						<Point><X>30</X><Y>10</Y></Point>
+						<Point><X>30</X><Y>92</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650550598422" Target="1650550413979" Trigger="timeout">
@@ -1424,10 +1533,10 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650550965293</Id>
 					<Name><![CDATA[transition1]]></Name>
-					<X>802</X><Y>100</Y>
+					<X>862</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1442,7 +1551,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[buyFood()]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -1454,10 +1563,10 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650550994481</Id>
 					<Name><![CDATA[transition3]]></Name>
-					<X>920</X><Y>110</Y>
+					<X>980</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1465,8 +1574,8 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>20</Y></Point>
-						<Point><X>-440</X><Y>20</Y></Point>
-						<Point><X>-440</X><Y>40</Y></Point>
+						<Point><X>-500</X><Y>20</Y></Point>
+						<Point><X>-500</X><Y>40</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650550978590" Target="1650613240939" Trigger="timeout">
@@ -1486,10 +1595,10 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556300061</Id>
 					<Name><![CDATA[transition5]]></Name>
-					<X>700</X><Y>20</Y>
+					<X>760</X><Y>20</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1504,7 +1613,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[this.sitOnBench()]]></Condition>
+						<Condition><![CDATA[true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -1516,10 +1625,10 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556328045</Id>
 					<Name><![CDATA[transition6]]></Name>
-					<X>802</X><Y>20</Y>
+					<X>862</X><Y>20</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1534,7 +1643,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[sitOnBench()]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -1546,17 +1655,19 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556362606</Id>
 					<Name><![CDATA[transition7]]></Name>
-					<X>790</X><Y>30</Y>
+					<X>850</X><Y>30</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>38.16768533019558</X><Y>162.2126626533314</Y></Point>
+						<Point><X>0</X><Y>20</Y></Point>
+						<Point><X>30</X><Y>20</Y></Point>
+						<Point><X>30</X><Y>172</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650556291890" Target="1650550413979" Trigger="timeout">
@@ -1576,10 +1687,10 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556489446</Id>
 					<Name><![CDATA[transition8]]></Name>
-					<X>700</X><Y>160</Y>
+					<X>760</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1606,19 +1717,21 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556535938</Id>
 					<Name><![CDATA[transition9]]></Name>
-					<X>790</X><Y>170</Y>
+					<X>850</X><Y>170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>33.60000000000002</X><Y>25.19999999999999</Y></Point>
+						<Point><X>0</X><Y>10</Y></Point>
+						<Point><X>30</X><Y>10</Y></Point>
+						<Point><X>30</X><Y>32</Y></Point>
 					</Points>
-					<IconOffset>20.0</IconOffset>
+					<IconOffset>10.0</IconOffset>
 					<Properties Source="1650556295293" Target="1650550413979" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
@@ -1636,10 +1749,10 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556541711</Id>
 					<Name><![CDATA[transition10]]></Name>
-					<X>802</X><Y>160</Y>
+					<X>862</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1654,7 +1767,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[goToBathroom()]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -1666,10 +1779,10 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556662964</Id>
 					<Name><![CDATA[transition11]]></Name>
-					<X>920</X><Y>40</Y>
+					<X>980</X><Y>40</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1677,8 +1790,8 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>20</Y></Point>
-						<Point><X>-440</X><Y>20</Y></Point>
-						<Point><X>-440</X><Y>40</Y></Point>
+						<Point><X>-500</X><Y>20</Y></Point>
+						<Point><X>-500</X><Y>40</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650556310435" Target="1650613232363" Trigger="timeout">
@@ -1698,10 +1811,10 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556683377</Id>
 					<Name><![CDATA[transition12]]></Name>
-					<X>920</X><Y>180</Y>
+					<X>980</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1732,17 +1845,17 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1650557641633</Id>
 					<Name><![CDATA[transition16]]></Name>
-					<X>570</X><Y>370</Y>
+					<X>600</X><Y>370</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-70</Y></Point>
+						<Point><X>0</X><Y>-90</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1650557192021" Target="1650613345513" Trigger="timeout">
+					<Properties Source="1650557192021" Target="1653295382625" Trigger="timeout">
 						<Action><![CDATA[this.lowerNeeds(selectedRide.ridingTime);]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[selectedRide.ridingTime]]></Code>
@@ -1760,22 +1873,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="InitialStatePointer" ParentState="CheckNeeds" ParentStateId="1650613345513">
-					<Id>1650613439285</Id>
-					<Name><![CDATA[initialState]]></Name>
-					<X>450</X><Y>-30</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>40</Y></Point>
-					</Points>
-					<Properties Target="1650613221008">
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613463977</Id>
 					<Name><![CDATA[transition4]]></Name>
 					<X>520</X><Y>20</Y>
@@ -1785,7 +1883,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>28</X><Y>0</Y></Point>
+						<Point><X>58</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650613221008" Target="1650613444326" Trigger="condition">
@@ -1793,7 +1891,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[this.isTired()]]></Condition>
+						<Condition><![CDATA[true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -1805,10 +1903,10 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613481309</Id>
 					<Name><![CDATA[transition13]]></Name>
-					<X>560</X><Y>30</Y>
+					<X>590</X><Y>30</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1816,8 +1914,8 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>20</Y></Point>
-						<Point><X>-110</X><Y>20</Y></Point>
-						<Point><X>-110</X><Y>50</Y></Point>
+						<Point><X>-140</X><Y>20</Y></Point>
+						<Point><X>-140</X><Y>50</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650613444326" Target="1650613232363" Trigger="timeout">
@@ -1837,17 +1935,17 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613526880</Id>
 					<Name><![CDATA[transition20]]></Name>
-					<X>572</X><Y>20</Y>
+					<X>602</X><Y>20</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>28</X><Y>0</Y></Point>
+						<Point><X>58</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650613444326" Target="1650555986009" Trigger="timeout">
@@ -1855,7 +1953,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[isTired()]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -1867,7 +1965,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613565371</Id>
 					<Name><![CDATA[transition21]]></Name>
 					<X>520</X><Y>90</Y>
@@ -1877,7 +1975,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>28</X><Y>0</Y></Point>
+						<Point><X>58</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650613232363" Target="1650613551613" Trigger="condition">
@@ -1885,7 +1983,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[this.isHungry()]]></Condition>
+						<Condition><![CDATA[true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -1897,17 +1995,17 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613588621</Id>
 					<Name><![CDATA[transition22]]></Name>
-					<X>572</X><Y>90</Y>
+					<X>602</X><Y>90</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>28</X><Y>0</Y></Point>
+						<Point><X>58</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650613551613" Target="1650550401523" Trigger="timeout">
@@ -1915,7 +2013,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[isHungry()]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -1927,10 +2025,10 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613594265</Id>
 					<Name><![CDATA[transition23]]></Name>
-					<X>560</X><Y>100</Y>
+					<X>590</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1938,8 +2036,8 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>20</Y></Point>
-						<Point><X>-110</X><Y>20</Y></Point>
-						<Point><X>-110</X><Y>50</Y></Point>
+						<Point><X>-140</X><Y>20</Y></Point>
+						<Point><X>-140</X><Y>50</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650613551613" Target="1650613240939" Trigger="timeout">
@@ -1959,7 +2057,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613613663</Id>
 					<Name><![CDATA[transition24]]></Name>
 					<X>520</X><Y>160</Y>
@@ -1969,7 +2067,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>28</X><Y>0</Y></Point>
+						<Point><X>58</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650613240939" Target="1650613554342" Trigger="condition">
@@ -1977,7 +2075,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[this.isNeedingBathroom()]]></Condition>
+						<Condition><![CDATA[true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -1989,17 +2087,17 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613686030</Id>
 					<Name><![CDATA[transition25]]></Name>
-					<X>572</X><Y>160</Y>
+					<X>602</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>28</X><Y>0</Y></Point>
+						<Point><X>58</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650613554342" Target="1650556220147" Trigger="timeout">
@@ -2007,7 +2105,7 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[isNeedingBathroom()]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -2019,18 +2117,18 @@ this.moveToInTime(selectedRide, 10);]]></EntryAction>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="CheckNeeds" ParentStateId="1650613345513">
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613697084</Id>
 					<Name><![CDATA[transition26]]></Name>
-					<X>560</X><Y>160</Y>
+					<X>590</X><Y>170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
-						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>0</X><Y>80</Y></Point>
-						<Point><X>280</X><Y>80</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>70</Y></Point>
+						<Point><X>310</X><Y>70</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650613554342" Target="1650616326246" Trigger="timeout">
@@ -2127,7 +2225,7 @@ this.selectRandomRide();]]></Action>
 						<Point><X>-50</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1650613345513" Target="1650550391174" Trigger="condition">
+					<Properties Source="1653295382625" Target="1650550391174" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2144,6 +2242,21 @@ this.selectRandomRide();]]></Action>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
+				<StatechartElement Class="InitialStatePointer" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1653295423395</Id>
+					<Name><![CDATA[initialState]]></Name>
+					<X>470</X><Y>-30</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
+					</Points>
+					<Properties Target="1650613221008">
+					</Properties>	
+				</StatechartElement>
 			</StatechartElements>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
@@ -2156,8 +2269,9 @@ this.selectRandomRide();]]></Action>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[Stall selectedStall 
-	= randomWhere(main.stalls, s -> s.type == "F");
+					<Body><![CDATA[//Stall selectedStall 
+//	= randomWhere(main.stalls, s -> s.type == "F");
+Stall selectedStall = main.stalls.random();
 
 if (this.money >= selectedStall.price) {
 	this.hunger += 50;
@@ -2192,18 +2306,19 @@ else return false;]]></Body>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[//Stall selectedStall 
-//	= randomWhere(main.stalls, s -> s.type == "E");
-Stall selectedStall = main.stalls.random();
+					<Body><![CDATA[Bench selectedBench
+	= randomWhere(main.benches, s -> s.occupied == false);
+//Stall selectedStall = main.stalls.random();
 
-if (this.money >= selectedStall.price) {
-	this.energy += 50;
-	this.money -= selectedStall.price;
-	this.lowerNeeds(5);
-	
-	return true;
+for (Bench b : main.benches) {
+	if (b.occupied == false) {
+		this.energy += 50;
+		this.lowerNeeds(5);
+		send("taken",selectedBench);
+		return true;
+	}
 }
-else return false;]]></Body>
+return false;]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
@@ -2215,8 +2330,9 @@ else return false;]]></Body>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[Stall selectedStall 
-	= randomWhere(main.stalls, s -> s.type == "B");
+					<Body><![CDATA[//Stall selectedStall 
+//	= randomWhere(main.stalls, s -> s.type == "B");
+Stall selectedStall = main.stalls.random();
 
 if (this.money >= selectedStall.price) {
 	this.bathroomNeed = 100;
@@ -2290,17 +2406,6 @@ this.energy -= (int) time_passed * energy_factor;
 this.hunger -= (int) time_passed * hunger_factor;
 this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 				</Function>
-				<Function AccessType="default" StaticFunction="false">
-					<ReturnModificator>VOID</ReturnModificator>
-					<ReturnType><![CDATA[double]]></ReturnType>
-					<Id>1652690013641</Id>
-					<Name><![CDATA[advance]]></Name>
-					<X>50</X><Y>660</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-				</Function>
 			</Functions>
 			<AgentLinks>
 				<AgentLink>
@@ -2367,7 +2472,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 				<Group>
 					<Id>1650471310155</Id>
 					<Name><![CDATA[person]]></Name>
-					<X>300</X><Y>0</Y>
+					<X>0</X><Y>0</Y>
 					<Label><X>-20</X><Y>20</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2655,7 +2760,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<Id>1652625637629</Id>
 					<Name><![CDATA[house]]></Name>
 					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<Label><X>13.809</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
@@ -2668,7 +2773,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 				<Polyline>
 					<Id>1652625637631</Id>
 					<Name><![CDATA[_ps257]]></Name>
-					<X>-1</X><Y>10</Y>
+					<X>-1.381</X><Y>13.933</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2689,16 +2794,16 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>10</X><Y>-5</Y><Z>0</Z></Point>
-					   <Point><X>10</X><Y>-11</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-6</Y><Z>0</Z></Point>
+					   <Point><X>13.809</X><Y>-6.966</Y><Z>0</Z></Point>
+					   <Point><X>13.809</X><Y>-15.326</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-8.36</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 				<Polyline>
 					<Id>1652625637633</Id>
 					<Name><![CDATA[_ps258]]></Name>
-					<X>-1</X><Y>4</Y>
+					<X>-1.381</X><Y>5.573</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2719,16 +2824,16 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>10</X><Y>-5</Y><Z>0</Z></Point>
-					   <Point><X>5</X><Y>-11</Y><Z>0</Z></Point>
-					   <Point><X>-5</X><Y>-6</Y><Z>0</Z></Point>
+					   <Point><X>13.809</X><Y>-6.966</Y><Z>0</Z></Point>
+					   <Point><X>6.905</X><Y>-15.326</Y><Z>0</Z></Point>
+					   <Point><X>-6.905</X><Y>-8.36</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 				<Polyline>
 					<Id>1652625637635</Id>
 					<Name><![CDATA[_ps259]]></Name>
-					<X>-11</X><Y>5</Y>
+					<X>-15.191</X><Y>6.966</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2749,17 +2854,17 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-6</Y><Z>0</Z></Point>
-					   <Point><X>5</X><Y>-7</Y><Z>0</Z></Point>
-					   <Point><X>10</X><Y>-1</Y><Z>0</Z></Point>
-					   <Point><X>10</X><Y>5</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-8.36</Y><Z>0</Z></Point>
+					   <Point><X>6.905</X><Y>-9.753</Y><Z>0</Z></Point>
+					   <Point><X>13.809</X><Y>-1.393</Y><Z>0</Z></Point>
+					   <Point><X>13.809</X><Y>6.966</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 				<Polyline>
 					<Id>1652625637637</Id>
 					<Name><![CDATA[_ps260]]></Name>
-					<X>-11</X><Y>-1</Y>
+					<X>-15.191</X><Y>-1.393</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2780,16 +2885,16 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>10</X><Y>-5</Y><Z>0</Z></Point>
-					   <Point><X>15</X><Y>-6</Y><Z>0</Z></Point>
-					   <Point><X>5</X><Y>-1</Y><Z>0</Z></Point>
+					   <Point><X>13.809</X><Y>-6.966</Y><Z>0</Z></Point>
+					   <Point><X>20.714</X><Y>-8.36</Y><Z>0</Z></Point>
+					   <Point><X>6.905</X><Y>-1.393</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 				<Polyline>
 					<Id>1652625637639</Id>
 					<Name><![CDATA[_ps261]]></Name>
-					<X>-1</X><Y>10</Y>
+					<X>-1.381</X><Y>13.933</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2810,19 +2915,19 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>10</X><Y>-5</Y><Z>0</Z></Point>
-					   <Point><X>10</X><Y>-11</Y><Z>0</Z></Point>
-					   <Point><X>5</X><Y>-17</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-16</Y><Z>0</Z></Point>
-					   <Point><X>-10</X><Y>-11</Y><Z>0</Z></Point>
-					   <Point><X>-10</X><Y>-5</Y><Z>0</Z></Point>
+					   <Point><X>13.809</X><Y>-6.966</Y><Z>0</Z></Point>
+					   <Point><X>13.809</X><Y>-15.326</Y><Z>0</Z></Point>
+					   <Point><X>6.905</X><Y>-23.686</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-22.293</Y><Z>0</Z></Point>
+					   <Point><X>-13.809</X><Y>-15.326</Y><Z>0</Z></Point>
+					   <Point><X>-13.809</X><Y>-6.966</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 				<Polyline>
 					<Id>1652625637641</Id>
 					<Name><![CDATA[_ps262]]></Name>
-					<X>-9</X><Y>4</Y>
+					<X>-12.429</X><Y>5.573</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2843,16 +2948,16 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>2</X><Y>1</Y><Z>0</Z></Point>
-					   <Point><X>2</X><Y>-2</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-3</Y><Z>0</Z></Point>
+					   <Point><X>2.762</X><Y>1.393</Y><Z>0</Z></Point>
+					   <Point><X>2.762</X><Y>-2.787</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-4.18</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 				<Polyline>
 					<Id>1652625637643</Id>
 					<Name><![CDATA[_ps263]]></Name>
-					<X>1</X><Y>7</Y>
+					<X>1.381</X><Y>9.753</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2873,16 +2978,16 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>2</X><Y>-1</Y><Z>0</Z></Point>
-					   <Point><X>2</X><Y>-4</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-3</Y><Z>0</Z></Point>
+					   <Point><X>2.762</X><Y>-1.393</Y><Z>0</Z></Point>
+					   <Point><X>2.762</X><Y>-5.573</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-4.18</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 				<Polyline>
 					<Id>1652625637645</Id>
 					<Name><![CDATA[_ps264]]></Name>
-					<X>-5</X><Y>6</Y>
+					<X>-6.905</X><Y>8.36</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2903,16 +3008,16 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>2</X><Y>1</Y><Z>0</Z></Point>
-					   <Point><X>2</X><Y>-2</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-3</Y><Z>0</Z></Point>
+					   <Point><X>2.762</X><Y>1.393</Y><Z>0</Z></Point>
+					   <Point><X>2.762</X><Y>-2.787</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-4.18</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 				<Polyline>
 					<Id>1652625637647</Id>
 					<Name><![CDATA[_ps265]]></Name>
-					<X>-1</X><Y>10</Y>
+					<X>-1.381</X><Y>13.933</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2933,9 +3038,9 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>4</X><Y>2</Y><Z>0</Z></Point>
-					   <Point><X>14</X><Y>-3</Y><Z>0</Z></Point>
-					   <Point><X>10</X><Y>-5</Y><Z>0</Z></Point>
+					   <Point><X>5.524</X><Y>2.787</Y><Z>0</Z></Point>
+					   <Point><X>19.333</X><Y>-4.18</Y><Z>0</Z></Point>
+					   <Point><X>13.809</X><Y>-6.966</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
@@ -3222,7 +3327,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 				<Connector>
 					<Id>1652691054706</Id>
 					<Name><![CDATA[connector]]></Name>
-					<X>270</X><Y>320</Y>
+					<X>250</X><Y>50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3255,7 +3360,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 				<Connector>
 					<Id>1652691083331</Id>
 					<Name><![CDATA[connector1]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>-20</X><Y>-270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3288,7 +3393,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 				<Connector>
 					<Id>1652691088079</Id>
 					<Name><![CDATA[connector2]]></Name>
-					<X>370</X><Y>320</Y>
+					<X>350</X><Y>50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3322,7 +3427,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 				<Connector>
 					<Id>1652691315762</Id>
 					<Name><![CDATA[connector3]]></Name>
-					<X>410</X><Y>320</Y>
+					<X>390</X><Y>50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3396,7 +3501,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<Id>1652691053319</Id>
 					<Name><![CDATA[rideQueue]]></Name>
 					<Description><![CDATA[Enter the queue and color in  blue when reaching position 0.]]></Description>
-					<X>270</X><Y>300</Y>
+					<X>250</X><Y>30</Y>
 					<Label><X>-5</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3519,7 +3624,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 				<EmbeddedObject>
 					<Id>1652691081379</Id>
 					<Name><![CDATA[enter]]></Name>
-					<X>210</X><Y>310</Y>
+					<X>190</X><Y>40</Y>
 					<Label><X>-5</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3541,17 +3646,20 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[locationType]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.LOCATION_XYZ]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[locationX]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[this.x]]></Code>
+								<Code><![CDATA[this.getX();]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[locationY]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[this.y]]></Code>
+								<Code><![CDATA[this.getY();]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -3583,6 +3691,10 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[speed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[0.1]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[changeDimensions]]></Name>
@@ -3657,7 +3769,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 				<EmbeddedObject>
 					<Id>1652691085030</Id>
 					<Name><![CDATA[exit]]></Name>
-					<X>460</X><Y>310</Y>
+					<X>440</X><Y>40</Y>
 					<Label><X>-10</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3720,7 +3832,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 				<EmbeddedObject>
 					<Id>1652691313541</Id>
 					<Name><![CDATA[goOnRide]]></Name>
-					<X>370</X><Y>300</Y>
+					<X>350</X><Y>30</Y>
 					<Label><X>-5</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3949,7 +4061,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<Id>1652687998755</Id>
 					<Name><![CDATA[store]]></Name>
 					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<Label><X>17.06</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
@@ -3962,7 +4074,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 				<Polyline>
 					<Id>1652687998757</Id>
 					<Name><![CDATA[_ps268]]></Name>
-					<X>0</X><Y>12</Y>
+					<X>0</X><Y>20.11</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3983,16 +4095,16 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>4</X><Y>2</Y><Z>0</Z></Point>
-					   <Point><X>16</X><Y>-4</Y><Z>0</Z></Point>
-					   <Point><X>12</X><Y>-6</Y><Z>0</Z></Point>
+					   <Point><X>6.824</X><Y>3.351</Y><Z>0</Z></Point>
+					   <Point><X>27.296</X><Y>-6.704</Y><Z>0</Z></Point>
+					   <Point><X>20.472</X><Y>-10.055</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 				<Polyline>
 					<Id>1652687998759</Id>
 					<Name><![CDATA[_ps269]]></Name>
-					<X>0</X><Y>4</Y>
+					<X>0</X><Y>6.704</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4013,16 +4125,16 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>12</X><Y>-6</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-12</Y><Z>0</Z></Point>
-					   <Point><X>-12</X><Y>-6</Y><Z>0</Z></Point>
+					   <Point><X>20.472</X><Y>-10.055</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-20.11</Y><Z>0</Z></Point>
+					   <Point><X>-20.472</X><Y>-10.055</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 				<Polyline>
 					<Id>1652687998761</Id>
 					<Name><![CDATA[_ps270]]></Name>
-					<X>-12</X><Y>6</Y>
+					<X>-20.472</X><Y>10.055</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4043,16 +4155,16 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-8</Y><Z>0</Z></Point>
-					   <Point><X>12</X><Y>-2</Y><Z>0</Z></Point>
-					   <Point><X>12</X><Y>6</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-13.406</Y><Z>0</Z></Point>
+					   <Point><X>20.472</X><Y>-3.351</Y><Z>0</Z></Point>
+					   <Point><X>20.472</X><Y>10.055</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 				<Polyline>
 					<Id>1652687998763</Id>
 					<Name><![CDATA[_ps271]]></Name>
-					<X>0</X><Y>12</Y>
+					<X>0</X><Y>20.11</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4073,16 +4185,16 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>12</X><Y>-6</Y><Z>0</Z></Point>
-					   <Point><X>12</X><Y>-14</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-8</Y><Z>0</Z></Point>
+					   <Point><X>20.472</X><Y>-10.055</Y><Z>0</Z></Point>
+					   <Point><X>20.472</X><Y>-23.461</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-13.406</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 				<Polyline>
 					<Id>1652687998765</Id>
 					<Name><![CDATA[_ps272]]></Name>
-					<X>-10</X><Y>7</Y>
+					<X>-17.06</X><Y>11.731</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4103,18 +4215,18 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>10</X><Y>5</Y><Z>0</Z></Point>
-					   <Point><X>20</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>20</X><Y>-5</Y><Z>0</Z></Point>
-					   <Point><X>10</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
+					   <Point><X>17.06</X><Y>8.379</Y><Z>0</Z></Point>
+					   <Point><X>34.12</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>34.12</X><Y>-8.379</Y><Z>0</Z></Point>
+					   <Point><X>17.06</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-8.379</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 				<Line>
 					<Id>1652687998767</Id>
 					<Name><![CDATA[_ps273]]></Name>
-					<X>2</X><Y>11</Y>
+					<X>3.412</X><Y>18.434</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4132,13 +4244,13 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<EndArrowSize>1</EndArrowSize>
 					<EndArrowStyle>0</EndArrowStyle>
 					<Dx>0</Dx>
-					<Dy>-6</Dy>
+					<Dy>-11</Dy>
 					<Dz>0</Dz>
 				</Line>
 				<Line>
 					<Id>1652687998769</Id>
 					<Name><![CDATA[_ps274]]></Name>
-					<X>-2</X><Y>11</Y>
+					<X>-3.412</X><Y>18.434</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4156,13 +4268,13 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<EndArrowSize>1</EndArrowSize>
 					<EndArrowStyle>0</EndArrowStyle>
 					<Dx>0</Dx>
-					<Dy>-6</Dy>
+					<Dy>-11</Dy>
 					<Dz>0</Dz>
 				</Line>
 				<Polyline>
 					<Id>1652687998771</Id>
 					<Name><![CDATA[_ps275]]></Name>
-					<X>0</X><Y>12</Y>
+					<X>0</X><Y>20.11</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4183,17 +4295,349 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-					   <Point><X>12</X><Y>-6</Y><Z>0</Z></Point>
-					   <Point><X>12</X><Y>-14</Y><Z>0</Z></Point>
-					   <Point><X>0</X><Y>-20</Y><Z>0</Z></Point>
-					   <Point><X>-12</X><Y>-14</Y><Z>0</Z></Point>
-					   <Point><X>-12</X><Y>-6</Y><Z>0</Z></Point>
+					   <Point><X>20.472</X><Y>-10.055</Y><Z>0</Z></Point>
+					   <Point><X>20.472</X><Y>-23.461</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-33.516</Y><Z>0</Z></Point>
+					   <Point><X>-20.472</X><Y>-23.461</Y><Z>0</Z></Point>
+					   <Point><X>-20.472</X><Y>-10.055</Y><Z>0</Z></Point>
 					</Points>
 					<Closed>true</Closed>
 				</Polyline>
 			</Presentation>
 
 				</Group>
+			</Presentation>
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1653295703524</Id>
+			<Name><![CDATA[Bench]]></Name>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1653295703522</Id>
+				<Name><![CDATA[1653295703522]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1653379200000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1653295703520</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1653295703523</CurrentLevel>
+			<ConnectionsId>1653295703519</ConnectionsId>
+			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1653296854632</Id>
+					<Name><![CDATA[occupied]]></Name>
+					<X>50</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1653296788659</Id>
+					<Name><![CDATA[number]]></Name>
+					<X>50</X><Y>40</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1653296788657</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+			</Variables>
+			<StatechartElements>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1653297295271</Id>
+					<Name><![CDATA[free]]></Name>
+					<X>220</X><Y>90</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="50" Height="60">
+						<EntryAction><![CDATA[benchshape.setFillColor(feldspar)]]></EntryAction>
+						<FillColor>-4144960</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1653297302243</Id>
+					<Name><![CDATA[inUse]]></Name>
+					<X>350</X><Y>90</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="50" Height="60">
+						<EntryAction><![CDATA[benchshape.setFillColor(red)]]></EntryAction>
+						<FillColor>-65536</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
+					<Id>1653297292073</Id>
+					<Name><![CDATA[statechart]]></Name>
+					<X>240</X><Y>50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
+					</Points>
+					<Properties Target="1653297295271">
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1653297319841</Id>
+					<Name><![CDATA[transition]]></Name>
+					<X>270</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>80</X><Y>0</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1653297295271" Target="1653297302243" Trigger="message">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[String]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[equalsTo]]></FilterType>
+						<EqualsExpression><![CDATA["taken"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1653297328674</Id>
+					<Name><![CDATA[transition1]]></Name>
+					<X>350</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-80</X><Y>0</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1653297302243" Target="1653297295271" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[10]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+			</StatechartElements>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1653295703519</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<StatechartReference>
+						<PackageName><![CDATA[lunapark]]></PackageName>
+						<ClassName><![CDATA[Bench]]></ClassName>
+						<ItemName><![CDATA[statechart]]></ItemName>
+					</StatechartReference>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+			<ContainerLinks>
+				<ContainerLink>
+					<Id>1653295703665</Id>
+					<Name><![CDATA[main]]></Name>
+					<X>50</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[lunapark]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+					</ActiveObjectClass>
+				</ContainerLink>
+			</ContainerLinks>
+
+			<Presentation>
+				<Level>
+					<Id>1653295703523</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+			<Presentation>
+				<Polyline>
+					<Id>1653296954586</Id>
+					<Name><![CDATA[benchshape]]></Name>
+					<X>-10</X><Y>10</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>3</LineWidth>
+					<LineColor>-7650029</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<FillColor>-3042699</FillColor>
+					<FillMaterial>null</FillMaterial>
+					<Points>
+					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+					   <Point><X>0</X><Y>-10</Y><Z>0</Z></Point>
+					   <Point><X>10</X><Y>-10</Y><Z>0</Z></Point>
+					   <Point><X>20</X><Y>-10</Y><Z>0</Z></Point>
+					   <Point><X>20</X><Y>0</Y><Z>0</Z></Point>
+					</Points>
+					<Closed>false</Closed>
+				</Polyline>
 			</Presentation>
 
 				</Level>
@@ -4209,14 +4653,35 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
-		<Width>550</Width>
-		<Height>430</Height>
+		<Width>900</Width>
+		<Height>660</Height>
 	</Frame>
 	<Database>
 		<Logging>false</Logging>
 		<AutoExport>false</AutoExport>
 		<ShutdownCompact>false</ShutdownCompact>
 		<ImportSettings>
+			<ExternalConnection>
+				<Id>1653296724683</Id>
+				<Name><![CDATA[database]]></Name>
+				<X>0</X><Y>0</Y>
+				<Label><X>10</X><Y>0</Y></Label>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>true</ShowLabel>
+				<DatabaseType>EXCEL_ACCESS</DatabaseType>
+				<ConnectionURL><![CDATA[]]></ConnectionURL>
+				<ConnectOnStartup>true</ConnectOnStartup>
+				<DatabaseName><![CDATA[]]></DatabaseName>
+				<ResourceReference>
+					<PackageName><![CDATA[lunapark]]></PackageName>
+					<ClassName><![CDATA[Q:/GitHub/lunaparksim/data/benches.xlsx]]></ClassName>
+				</ResourceReference>
+				<Host><![CDATA[localhost]]></Host>
+				<JdbcDriverClassName><![CDATA[net.sourceforge.jtds.jdbc.Driver]]></JdbcDriverClassName>
+				<Login><![CDATA[]]></Login>
+				<Password><![CDATA[]]></Password>
+			</ExternalConnection>
 			<ExternalConnection>
 				<Id>1652688248431</Id>
 				<Name><![CDATA[database]]></Name>
@@ -4262,9 +4727,18 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 			<TableImportSettings>
 				<TableReference>
 					<PackageName><![CDATA[lunapark]]></PackageName>
-					<ClassName><![CDATA[rides_db]]></ClassName>
+					<ClassName><![CDATA[benches]]></ClassName>
 				</TableReference>
 				<ConnectionIndex>0</ConnectionIndex>
+				<ExternalTableName><![CDATA["benches"]]></ExternalTableName>
+				<AutoImport>false</AutoImport>
+			</TableImportSettings>
+			<TableImportSettings>
+				<TableReference>
+					<PackageName><![CDATA[lunapark]]></PackageName>
+					<ClassName><![CDATA[rides_db]]></ClassName>
+				</TableReference>
+				<ConnectionIndex>1</ConnectionIndex>
 				<ExternalTableName><![CDATA["Foglio1"]]></ExternalTableName>
 				<AutoImport>false</AutoImport>
 			</TableImportSettings>
@@ -4273,7 +4747,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<PackageName><![CDATA[lunapark]]></PackageName>
 					<ClassName><![CDATA[stalls_db]]></ClassName>
 				</TableReference>
-				<ConnectionIndex>1</ConnectionIndex>
+				<ConnectionIndex>2</ConnectionIndex>
 				<ExternalTableName><![CDATA["Foglio1"]]></ExternalTableName>
 				<AutoImport>false</AutoImport>
 			</TableImportSettings>
@@ -4372,6 +4846,10 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[C:/Users/alice/Downloads/stalls.xlsx]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+		</Resource>
+		<Resource>
+			<Path><![CDATA[Q:/GitHub/lunaparksim/data/benches.xlsx]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 	</ModelResources>
