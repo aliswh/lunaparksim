@@ -99,7 +99,7 @@
 				<PresentationFlag>false</PresentationFlag>
 				<ShowLabel>false</ShowLabel>
 				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-				<Length>100</Length>
+				<Length>70</Length>
 				<Rotation>0</Rotation>
 				<ScaleType>BASED_ON_LENGTH</ScaleType>
 				<ModelLength>10</ModelLength>
@@ -113,7 +113,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1653233506120</Id>
 					<Name><![CDATA[nVisitorsLeft]]></Name>
-					<X>430</X><Y>-100</Y>
+					<X>450</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -127,7 +127,7 @@
 				<Event>
 					<Id>1652629362406</Id>
 					<Name><![CDATA[eventVisitorArrives]]></Name>
-					<X>430</X><Y>-140</Y>
+					<X>450</X><Y>-140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -138,7 +138,7 @@
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
 						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[100]]></Code>
+							<Code><![CDATA[10]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 						</Rate>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
@@ -974,7 +974,7 @@
 			<AgentProperties>
 	 			<SpaceType>CONTINUOUS</SpaceType>			
 				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
-				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationTowardsMovement>false</RotateAnimationTowardsMovement>
 				<RotateAnimationVertically>false</RotateAnimationVertically>
 				<VelocityCode Class="CodeUnitValue">
 					<Code><![CDATA[10]]></Code>
@@ -1065,7 +1065,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1650557700315</Id>
 					<Name><![CDATA[selectedRide]]></Name>
-					<X>180</X><Y>620</Y>
+					<X>180</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1231,7 +1231,7 @@ selectedRide.enter.take(this);]]></EntryAction>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
 						<EntryAction><![CDATA[shapeBody.setFillColor(lightBlue);]]></EntryAction>
-						<ExitAction><![CDATA[moveToInTime(selectedRide, 50);]]></ExitAction>
+						<ExitAction><![CDATA[moveTo(selectedRide);]]></ExitAction>
 						<FillColor>-5383962</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -1453,6 +1453,7 @@ selectedRide.enter.take(this);]]></EntryAction>
 					<ShowLabel>false</ShowLabel>
 					<Properties>	
 						<Action><![CDATA[main.nVisitorsLeft += 1;
+moveTo(0,0);
 main.remove_visitors(this);]]></Action>
 					</Properties>	
 				</StatechartElement>
@@ -2272,6 +2273,7 @@ this.selectRandomRide();]]></Action>
 					<Body><![CDATA[//Stall selectedStall 
 //	= randomWhere(main.stalls, s -> s.type == "F");
 Stall selectedStall = main.stalls.random();
+moveTo(selectedStall);
 
 if (this.money >= selectedStall.price) {
 	this.hunger += 50;
@@ -2311,10 +2313,11 @@ else return false;]]></Body>
 //Stall selectedStall = main.stalls.random();
 
 for (Bench b : main.benches) {
+	moveTo(selectedBench);
+	this.lowerNeeds(5);
 	if (b.occupied == false) {
-		this.energy += 50;
-		this.lowerNeeds(5);
 		send("taken",selectedBench);
+		this.energy += 50;
 		return true;
 	}
 }
@@ -2330,13 +2333,14 @@ return false;]]></Body>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[//Stall selectedStall 
+					<Body><![CDATA[//Stall selectedBathroom 
 //	= randomWhere(main.stalls, s -> s.type == "B");
-Stall selectedStall = main.stalls.random();
+Stall selectedBathroom = main.stalls.random();
+moveTo(selectedBathroom);
 
-if (this.money >= selectedStall.price) {
+if (this.money >= selectedBathroom.price) {
 	this.bathroomNeed = 100;
-	this.money -= selectedStall.price;
+	this.money -= selectedBathroom.price;
 	this.lowerNeeds(5);
 	
 	return true;
@@ -2348,7 +2352,7 @@ else return false;]]></Body>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1650557926358</Id>
 					<Name><![CDATA[selectRandomRide]]></Name>
-					<X>50</X><Y>620</Y>
+					<X>50</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4121,7 +4125,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<BeginArrowStyle>0</BeginArrowStyle>
 					<EndArrowSize>1</EndArrowSize>
 					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor>-6690304</FillColor>
+					<FillColor>-6987</FillColor>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
@@ -4151,7 +4155,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<BeginArrowStyle>0</BeginArrowStyle>
 					<EndArrowSize>1</EndArrowSize>
 					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor>-8140800</FillColor>
+					<FillColor>-6987</FillColor>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
@@ -4181,7 +4185,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<BeginArrowStyle>0</BeginArrowStyle>
 					<EndArrowSize>1</EndArrowSize>
 					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor>-9986560</FillColor>
+					<FillColor>-2968436</FillColor>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
@@ -4211,7 +4215,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<BeginArrowStyle>0</BeginArrowStyle>
 					<EndArrowSize>1</EndArrowSize>
 					<EndArrowStyle>0</EndArrowStyle>
-					<FillColor>-12491776</FillColor>
+					<FillColor>-4419697</FillColor>
 					<FillMaterial>null</FillMaterial>
 					<Points>
 					   <Point><X>0</X><Y>0</Y><Z>0</Z></Point>
@@ -4236,7 +4240,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<Z>0</Z>
 					<ZHeight>10</ZHeight>
 					<LineWidth>1</LineWidth>
-					<LineColor>-9986560</LineColor>
+					<LineColor>-2968436</LineColor>
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
 					<BeginArrowSize>1</BeginArrowSize>
@@ -4260,7 +4264,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<Z>0</Z>
 					<ZHeight>10</ZHeight>
 					<LineWidth>1</LineWidth>
-					<LineColor>-8140800</LineColor>
+					<LineColor>-6987</LineColor>
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
 					<BeginArrowSize>1</BeginArrowSize>
@@ -4284,7 +4288,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 					<Z>0</Z>
 					<ZHeight>10</ZHeight>
 					<LineWidth>1</LineWidth>
-					<LineColor>-14667264</LineColor>
+					<LineColor>-2968436</LineColor>
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
 					<BeginArrowSize>1</BeginArrowSize>
