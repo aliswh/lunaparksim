@@ -1490,7 +1490,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1650557700315</Id>
 					<Name><![CDATA[selectedRide]]></Name>
-					<X>180</X><Y>500</Y>
+					<X>510</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1535,7 +1535,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1652686352219</Id>
 					<Name><![CDATA[nRidesDone]]></Name>
-					<X>160</X><Y>60</Y>
+					<X>510</X><Y>570</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1550,7 +1550,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1653468652846</Id>
 					<Name><![CDATA[selectedBathroom]]></Name>
-					<X>180</X><Y>440</Y>
+					<X>510</X><Y>470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1562,7 +1562,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1653493979319</Id>
 					<Name><![CDATA[selectedBench]]></Name>
-					<X>180</X><Y>380</Y>
+					<X>510</X><Y>410</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1574,7 +1574,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1653493990133</Id>
 					<Name><![CDATA[selectedStall]]></Name>
-					<X>180</X><Y>410</Y>
+					<X>510</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1617,7 +1617,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[20]]></Code>
+							<Code><![CDATA[30]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1650614968438</Id>
@@ -1657,7 +1657,7 @@
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1650550391174</Id>
 					<Name><![CDATA[Idle]]></Name>
-					<X>420</X><Y>380</Y>
+					<X>220</X><Y>460</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1670,7 +1670,7 @@
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1650557192021</Id>
 					<Name><![CDATA[GoOnRide]]></Name>
-					<X>580</X><Y>390</Y>
+					<X>380</X><Y>470</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1684,7 +1684,7 @@
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1650557166543</Id>
 					<Name><![CDATA[walkToRide]]></Name>
-					<X>580</X><Y>510</Y>
+					<X>380</X><Y>550</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1698,19 +1698,19 @@ moveTo(selectedRide);]]></EntryAction>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1653295382625</Id>
 					<Name><![CDATA[checkNeeds]]></Name>
-					<X>400</X><Y>-70</Y>
+					<X>200</X><Y>30</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="830" Height="350">
+					<Properties Width="830" Height="330">
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650616326246</Id>
 					<Name><![CDATA[IsGood]]></Name>
-					<X>540</X><Y>230</Y>
+					<X>340</X><Y>310</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1723,7 +1723,7 @@ moveTo(selectedRide);]]></EntryAction>
 				<StatechartElement Class="Branch" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613554342</Id>
 					<Name><![CDATA[branch6]]></Name>
-					<X>590</X><Y>160</Y>
+					<X>390</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1734,7 +1734,7 @@ moveTo(selectedRide);]]></EntryAction>
 				<StatechartElement Class="Branch" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613551613</Id>
 					<Name><![CDATA[branch5]]></Name>
-					<X>590</X><Y>90</Y>
+					<X>390</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1745,7 +1745,7 @@ moveTo(selectedRide);]]></EntryAction>
 				<StatechartElement Class="Branch" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613444326</Id>
 					<Name><![CDATA[branch4]]></Name>
-					<X>590</X><Y>20</Y>
+					<X>390</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1756,7 +1756,7 @@ moveTo(selectedRide);]]></EntryAction>
 				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650550978590</Id>
 					<Name><![CDATA[BuyingFood]]></Name>
-					<X>1110</X><Y>80</Y>
+					<X>910</X><Y>160</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1773,20 +1773,21 @@ this.lowerNeeds(5);]]></EntryAction>
 				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556310435</Id>
 					<Name><![CDATA[SittingOnBench]]></Name>
-					<X>1110</X><Y>10</Y>
+					<X>910</X><Y>90</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
 						<EntryAction><![CDATA[shapeBody.setFillColor(khaki)]]></EntryAction>
+						<ExitAction><![CDATA[this.energy += 50;]]></ExitAction>
 						<FillColor>-989556</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556548440</Id>
 					<Name><![CDATA[AtBathroom]]></Name>
-					<X>1110</X><Y>150</Y>
+					<X>910</X><Y>240</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1794,13 +1795,14 @@ this.lowerNeeds(5);]]></EntryAction>
 					<Properties Width="100" Height="30">
 						<EntryAction><![CDATA[shapeBody.setFillColor(khaki);
 selectedBathroom.enterBathroom.take(this);]]></EntryAction>
+						<ExitAction><![CDATA[this.lowerNeeds(5);]]></ExitAction>
 						<FillColor>-989556</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650550401523</Id>
 					<Name><![CDATA[NeedFood]]></Name>
-					<X>660</X><Y>80</Y>
+					<X>460</X><Y>170</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1813,7 +1815,7 @@ selectedBathroom.enterBathroom.take(this);]]></EntryAction>
 				<StatechartElement Class="Branch" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650550598422</Id>
 					<Name><![CDATA[branch]]></Name>
-					<X>850</X><Y>90</Y>
+					<X>830</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1824,7 +1826,7 @@ selectedBathroom.enterBathroom.take(this);]]></EntryAction>
 				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650555986009</Id>
 					<Name><![CDATA[NeedRest]]></Name>
-					<X>660</X><Y>10</Y>
+					<X>460</X><Y>90</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1837,7 +1839,7 @@ selectedBathroom.enterBathroom.take(this);]]></EntryAction>
 				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556220147</Id>
 					<Name><![CDATA[NeedBathroom]]></Name>
-					<X>660</X><Y>150</Y>
+					<X>460</X><Y>250</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1850,7 +1852,7 @@ selectedBathroom.enterBathroom.take(this);]]></EntryAction>
 				<StatechartElement Class="Branch" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556291890</Id>
 					<Name><![CDATA[branch1]]></Name>
-					<X>850</X><Y>20</Y>
+					<X>830</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1861,7 +1863,7 @@ selectedBathroom.enterBathroom.take(this);]]></EntryAction>
 				<StatechartElement Class="Branch" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556295293</Id>
 					<Name><![CDATA[branch2]]></Name>
-					<X>850</X><Y>160</Y>
+					<X>830</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1872,7 +1874,7 @@ selectedBathroom.enterBathroom.take(this);]]></EntryAction>
 				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613221008</Id>
 					<Name><![CDATA[CheckRest]]></Name>
-					<X>420</X><Y>10</Y>
+					<X>220</X><Y>90</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1885,7 +1887,7 @@ selectedBathroom.enterBathroom.take(this);]]></EntryAction>
 				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613232363</Id>
 					<Name><![CDATA[CheckFood]]></Name>
-					<X>420</X><Y>80</Y>
+					<X>220</X><Y>170</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1898,7 +1900,7 @@ selectedBathroom.enterBathroom.take(this);]]></EntryAction>
 				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613240939</Id>
 					<Name><![CDATA[CheckBathroom]]></Name>
-					<X>420</X><Y>150</Y>
+					<X>220</X><Y>250</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1911,7 +1913,7 @@ selectedBathroom.enterBathroom.take(this);]]></EntryAction>
 				<StatechartElement Class="FinalState" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650550413979</Id>
 					<Name><![CDATA[goHome]]></Name>
-					<X>880</X><Y>220</Y>
+					<X>860</X><Y>310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1926,46 +1928,55 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1653493763882</Id>
 					<Name><![CDATA[moveToBench]]></Name>
-					<X>940</X><Y>10</Y>
+					<X>620</X><Y>90</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[this.moveTo(selectedBench);]]></EntryAction>
+						<EntryAction><![CDATA[this.selectedBench
+	= randomWhere(main.benches, s -> s.occupied == false);
+
+this.moveTo(selectedBench);]]></EntryAction>
 						<FillColor>-1</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1653493844451</Id>
 					<Name><![CDATA[moveToStall]]></Name>
-					<X>940</X><Y>80</Y>
+					<X>620</X><Y>170</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[this.moveTo(selectedStall);]]></EntryAction>
+						<EntryAction><![CDATA[this.selectedStall 
+	= main.stalls.random();
+
+this.moveTo(selectedStall);]]></EntryAction>
 						<FillColor>-1</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1653493891591</Id>
 					<Name><![CDATA[moveToBathroom]]></Name>
-					<X>940</X><Y>150</Y>
+					<X>620</X><Y>250</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="110" Height="30">
-						<EntryAction><![CDATA[this.moveTo(selectedBathroom)]]></EntryAction>
+						<EntryAction><![CDATA[this.selectedBathroom 
+	= main.bathrooms.random();
+	
+this.moveTo(selectedBathroom)]]></EntryAction>
 						<FillColor>-1</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 					<Id>1650550387877</Id>
 					<Name><![CDATA[visitorEntry]]></Name>
-					<X>470</X><Y>340</Y>
+					<X>270</X><Y>420</Y>
 					<Label><X>-80</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1981,17 +1992,17 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650550617938</Id>
 					<Name><![CDATA[doIhaveEnoughMoney]]></Name>
-					<X>760</X><Y>90</Y>
+					<X>560</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>78</X><Y>0</Y></Point>
+						<Point><X>60</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1650550401523" Target="1650550598422" Trigger="condition">
+					<Properties Source="1650550401523" Target="1653493844451" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2011,19 +2022,20 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650550908545</Id>
 					<Name><![CDATA[transition2]]></Name>
-					<X>850</X><Y>100</Y>
+					<X>830</X><Y>170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>20</Y></Point>
-						<Point><X>30</X><Y>20</Y></Point>
-						<Point><X>30</X><Y>112</Y></Point>
+						<Point><X>0</X><Y>-20</Y></Point>
+						<Point><X>-140</X><Y>-20</Y></Point>
+						<Point><X>-140</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1650550598422" Target="1650550413979" Trigger="timeout">
+					<Properties Source="1650550598422" Target="1653493844451" Trigger="timeout">
+						<Action><![CDATA[this.lowerNeeds(2)]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2043,17 +2055,17 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650550965293</Id>
 					<Name><![CDATA[transition1]]></Name>
-					<X>862</X><Y>90</Y>
+					<X>842</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>78</X><Y>0</Y></Point>
+						<Point><X>68</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1650550598422" Target="1653493844451" Trigger="timeout">
+					<Properties Source="1650550598422" Target="1650550978590" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2073,16 +2085,16 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650550994481</Id>
 					<Name><![CDATA[transition3]]></Name>
-					<X>1190</X><Y>110</Y>
+					<X>990</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>20</Y></Point>
-						<Point><X>-710</X><Y>20</Y></Point>
-						<Point><X>-710</X><Y>40</Y></Point>
+						<Point><X>0</X><Y>30</Y></Point>
+						<Point><X>-710</X><Y>30</Y></Point>
+						<Point><X>-710</X><Y>60</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650550978590" Target="1650613240939" Trigger="timeout">
@@ -2105,17 +2117,17 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556300061</Id>
 					<Name><![CDATA[transition5]]></Name>
-					<X>760</X><Y>20</Y>
+					<X>560</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>78</X><Y>0</Y></Point>
+						<Point><X>60</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1650555986009" Target="1650556291890" Trigger="condition">
+					<Properties Source="1650555986009" Target="1653493763882" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2135,17 +2147,17 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556328045</Id>
 					<Name><![CDATA[transition6]]></Name>
-					<X>862</X><Y>20</Y>
+					<X>842</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>78</X><Y>0</Y></Point>
+						<Point><X>68</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1650556291890" Target="1653493763882" Trigger="timeout">
+					<Properties Source="1650556291890" Target="1650556310435" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2165,19 +2177,20 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556362606</Id>
 					<Name><![CDATA[transition7]]></Name>
-					<X>850</X><Y>30</Y>
+					<X>830</X><Y>90</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>20</Y></Point>
-						<Point><X>30</X><Y>20</Y></Point>
-						<Point><X>30</X><Y>182</Y></Point>
+						<Point><X>0</X><Y>-20</Y></Point>
+						<Point><X>-140</X><Y>-20</Y></Point>
+						<Point><X>-140</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1650556291890" Target="1650550413979" Trigger="timeout">
+					<Properties Source="1650556291890" Target="1653493763882" Trigger="timeout">
+						<Action><![CDATA[this.lowerNeeds(2)]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2197,17 +2210,17 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556489446</Id>
 					<Name><![CDATA[transition8]]></Name>
-					<X>760</X><Y>160</Y>
+					<X>560</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>78</X><Y>0</Y></Point>
+						<Point><X>60</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1650556220147" Target="1650556295293" Trigger="condition">
+					<Properties Source="1650556220147" Target="1653493891591" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2227,19 +2240,20 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556535938</Id>
 					<Name><![CDATA[transition9]]></Name>
-					<X>850</X><Y>170</Y>
+					<X>830</X><Y>250</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>30</X><Y>10</Y></Point>
-						<Point><X>30</X><Y>42</Y></Point>
+						<Point><X>0</X><Y>-20</Y></Point>
+						<Point><X>-140</X><Y>-20</Y></Point>
+						<Point><X>-140</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>10.0</IconOffset>
-					<Properties Source="1650556295293" Target="1650550413979" Trigger="timeout">
+					<Properties Source="1650556295293" Target="1653493891591" Trigger="timeout">
+						<Action><![CDATA[this.lowerNeeds(2)]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2259,17 +2273,17 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556541711</Id>
 					<Name><![CDATA[transition10]]></Name>
-					<X>862</X><Y>160</Y>
+					<X>842</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>78</X><Y>0</Y></Point>
+						<Point><X>68</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1650556295293" Target="1653493891591" Trigger="timeout">
+					<Properties Source="1650556295293" Target="1650556548440" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2289,7 +2303,7 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556662964</Id>
 					<Name><![CDATA[transition11]]></Name>
-					<X>1190</X><Y>40</Y>
+					<X>990</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2298,7 +2312,7 @@ main.remove_visitors(this);]]></Action>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>20</Y></Point>
 						<Point><X>-710</X><Y>20</Y></Point>
-						<Point><X>-710</X><Y>40</Y></Point>
+						<Point><X>-710</X><Y>50</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650556310435" Target="1650613232363" Trigger="timeout">
@@ -2321,19 +2335,19 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650556683377</Id>
 					<Name><![CDATA[transition12]]></Name>
-					<X>1190</X><Y>180</Y>
+					<X>990</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>70</Y></Point>
-						<Point><X>-550</X><Y>70</Y></Point>
+						<Point><X>0</X><Y>60</Y></Point>
+						<Point><X>-550</X><Y>60</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650556548440" Target="1650616326246" Trigger="message">
-						<Action><![CDATA[this.setLocation(main.parkNode);]]></Action>
+						<Action><![CDATA[this.setLocation(selectedBathroom);]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[3]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2353,7 +2367,7 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1650557641633</Id>
 					<Name><![CDATA[transition16]]></Name>
-					<X>630</X><Y>390</Y>
+					<X>430</X><Y>470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2364,7 +2378,8 @@ main.remove_visitors(this);]]></Action>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650557192021" Target="1653295382625" Trigger="message">
-						<Action><![CDATA[this.lowerNeeds(selectedRide.ridingTime);]]></Action>
+						<Action><![CDATA[this.setLocation(selectedRide);
+this.lowerNeeds(selectedRide.ridingTime);]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[selectedRide.ridingTime]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2384,7 +2399,7 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613463977</Id>
 					<Name><![CDATA[transition4]]></Name>
-					<X>520</X><Y>20</Y>
+					<X>320</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2414,7 +2429,7 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613481309</Id>
 					<Name><![CDATA[transition13]]></Name>
-					<X>590</X><Y>30</Y>
+					<X>390</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2423,7 +2438,7 @@ main.remove_visitors(this);]]></Action>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>20</Y></Point>
 						<Point><X>-140</X><Y>20</Y></Point>
-						<Point><X>-140</X><Y>50</Y></Point>
+						<Point><X>-140</X><Y>60</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650613444326" Target="1650613232363" Trigger="timeout">
@@ -2446,7 +2461,7 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613526880</Id>
 					<Name><![CDATA[transition20]]></Name>
-					<X>602</X><Y>20</Y>
+					<X>402</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2476,7 +2491,7 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613565371</Id>
 					<Name><![CDATA[transition21]]></Name>
-					<X>520</X><Y>90</Y>
+					<X>320</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2506,7 +2521,7 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613588621</Id>
 					<Name><![CDATA[transition22]]></Name>
-					<X>602</X><Y>90</Y>
+					<X>402</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2536,7 +2551,7 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613594265</Id>
 					<Name><![CDATA[transition23]]></Name>
-					<X>590</X><Y>100</Y>
+					<X>390</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2545,7 +2560,7 @@ main.remove_visitors(this);]]></Action>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>20</Y></Point>
 						<Point><X>-140</X><Y>20</Y></Point>
-						<Point><X>-140</X><Y>50</Y></Point>
+						<Point><X>-140</X><Y>60</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650613551613" Target="1650613240939" Trigger="timeout">
@@ -2568,7 +2583,7 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613613663</Id>
 					<Name><![CDATA[transition24]]></Name>
-					<X>520</X><Y>160</Y>
+					<X>320</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2598,7 +2613,7 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613686030</Id>
 					<Name><![CDATA[transition25]]></Name>
-					<X>602</X><Y>160</Y>
+					<X>402</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2628,14 +2643,14 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1650613697084</Id>
 					<Name><![CDATA[transition26]]></Name>
-					<X>590</X><Y>170</Y>
+					<X>390</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>60</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650613554342" Target="1650616326246" Trigger="timeout">
@@ -2659,15 +2674,15 @@ main.remove_visitors(this);]]></Action>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1650613965300</Id>
 					<Name><![CDATA[transition]]></Name>
-					<X>470</X><Y>430</Y>
+					<X>270</X><Y>510</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>100</Y></Point>
-						<Point><X>110</X><Y>100</Y></Point>
+						<Point><X>0</X><Y>60</Y></Point>
+						<Point><X>110</X><Y>60</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650550391174" Target="1650557166543" Trigger="timeout">
@@ -2692,14 +2707,14 @@ this.selectRandomRide();]]></Action>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1652692942689</Id>
 					<Name><![CDATA[transition14]]></Name>
-					<X>630</X><Y>510</Y>
+					<X>430</X><Y>550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-90</Y></Point>
+						<Point><X>0</X><Y>-50</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650557166543" Target="1650557192021" Trigger="arrival">
@@ -2722,7 +2737,7 @@ this.selectRandomRide();]]></Action>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1653231619275</Id>
 					<Name><![CDATA[transition15]]></Name>
-					<X>540</X><Y>250</Y>
+					<X>340</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2753,7 +2768,7 @@ this.selectRandomRide();]]></Action>
 				<StatechartElement Class="InitialStatePointer" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1653295423395</Id>
 					<Name><![CDATA[checkNeedsEnter]]></Name>
-					<X>470</X><Y>-30</Y>
+					<X>300</X><Y>50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2768,17 +2783,17 @@ this.selectRandomRide();]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1653493809078</Id>
 					<Name><![CDATA[transition17]]></Name>
-					<X>1040</X><Y>20</Y>
+					<X>720</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>70</X><Y>0</Y></Point>
+						<Point><X>98</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1653493763882" Target="1650556310435" Trigger="arrival">
+					<Properties Source="1653493763882" Target="1650556291890" Trigger="arrival">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2798,17 +2813,17 @@ this.selectRandomRide();]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1653493844454</Id>
 					<Name><![CDATA[transition18]]></Name>
-					<X>1040</X><Y>90</Y>
+					<X>720</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>70</X><Y>0</Y></Point>
+						<Point><X>98</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1653493844451" Target="1650550978590" Trigger="arrival">
+					<Properties Source="1653493844451" Target="1650550598422" Trigger="arrival">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2828,17 +2843,17 @@ this.selectRandomRide();]]></Action>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
 					<Id>1653493891597</Id>
 					<Name><![CDATA[transition19]]></Name>
-					<X>1050</X><Y>160</Y>
+					<X>730</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>60</X><Y>0</Y></Point>
+						<Point><X>88</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1653493891591" Target="1650556548440" Trigger="arrival">
+					<Properties Source="1653493891591" Target="1650556295293" Trigger="arrival">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -2855,6 +2870,102 @@ this.selectRandomRide();]]></Action>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1653552535820</Id>
+					<Name><![CDATA[transition27]]></Name>
+					<X>830</X><Y>110</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>20</Y></Point>
+						<Point><X>30</X><Y>20</Y></Point>
+						<Point><X>30</X><Y>192</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1650556291890" Target="1650550413979" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[this.energy <= 0]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>false</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1653553018571</Id>
+					<Name><![CDATA[transition28]]></Name>
+					<X>830</X><Y>190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>20</Y></Point>
+						<Point><X>30</X><Y>20</Y></Point>
+						<Point><X>30</X><Y>112</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1650550598422" Target="1650550413979" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[this.hunger <= 0]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>false</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
+					<Id>1653553360853</Id>
+					<Name><![CDATA[transition29]]></Name>
+					<X>830</X><Y>270</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>20</Y></Point>
+						<Point><X>30</X><Y>20</Y></Point>
+						<Point><X>30</X><Y>32</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1650556295293" Target="1650550413979" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[this.bathroomNeed <= 0]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>false</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
 			</StatechartElements>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
@@ -2862,17 +2973,12 @@ this.selectRandomRide();]]></Action>
 					<ReturnType><![CDATA[boolean]]></ReturnType>
 					<Id>1650549976798</Id>
 					<Name><![CDATA[buyFood]]></Name>
-					<X>50</X><Y>410</Y>
+					<X>50</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[this.selectedStall = main.stalls.random();
-
-if (this.money >= selectedStall.price) {
-	return true;
-}
-else return false;]]></Body>
+					<Body><![CDATA[return this.money >= selectedStall.price;]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
@@ -2893,50 +2999,34 @@ else return false;]]></Body>
 					<ReturnType><![CDATA[boolean]]></ReturnType>
 					<Id>1650556445059</Id>
 					<Name><![CDATA[sitOnBench]]></Name>
-					<X>50</X><Y>380</Y>
+					<X>50</X><Y>410</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[Bench selectedBench
-	= randomWhere(main.benches, s -> s.occupied == false);
-
-for (Bench b : main.benches) {
-	if (b.occupied == false) {
-		this.selectedBench = b;
-		send("taken",selectedBench);
-		this.energy += 50;
-		return true;
-	}
-}
-return false;]]></Body>
+					<Body><![CDATA[if (selectedBench.occupied == false) {
+	send("taken",selectedBench);
+	return true;
+} else return false;]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
 					<ReturnType><![CDATA[boolean]]></ReturnType>
 					<Id>1650556606389</Id>
 					<Name><![CDATA[goToBathroom]]></Name>
-					<X>50</X><Y>440</Y>
+					<X>50</X><Y>470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[List<Bathroom> bathroomOrdered =
-	sortAscending(main.bathrooms, ba -> distanceTo(ba) );
-
-for (Bathroom b : bathroomOrdered) {
-	if (b.bathroomQueue.canEnter()) {
-		this.selectedBathroom = b;
-		return true;
-	}
-} return false;]]></Body>
+					<Body><![CDATA[return selectedBathroom.bathroomQueue.canEnter();]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>VOID</ReturnModificator>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1650557926358</Id>
 					<Name><![CDATA[selectRandomRide]]></Name>
-					<X>50</X><Y>500</Y>
+					<X>50</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2977,7 +3067,7 @@ for (Bathroom b : bathroomOrdered) {
 					<Id>1650614512433</Id>
 					<Name><![CDATA[lowerNeeds]]></Name>
 					<Description><![CDATA[Everytime a Timeout is used, decrease the needs by the time_passed times some factor]]></Description>
-					<X>50</X><Y>210</Y>
+					<X>50</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2986,9 +3076,9 @@ for (Bathroom b : bathroomOrdered) {
 						<Name><![CDATA[time_passed]]></Name>
 						<Type><![CDATA[int]]></Type>
 					</Parameter>
-					<Body><![CDATA[double energy_factor = 0.3;
-double hunger_factor = 0.2;
-double bathr_factor = 0.2;
+					<Body><![CDATA[double energy_factor = 0.6;
+double hunger_factor = 0.5;
+double bathr_factor = 0.5;
  
 this.energy -= (int) time_passed * energy_factor;
 this.hunger -= (int) time_passed * hunger_factor;
@@ -3124,6 +3214,27 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 			</Presentation>
 
 				</Group>
+				<Text>
+					<Id>1653553776230</Id>
+					<Name><![CDATA[text]]></Name>
+					<X>880</X><Y>300</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Go home!]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>10</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Presentation>
 
 				</Level>
@@ -4447,9 +4558,6 @@ send("finished", agent);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[pushProtocol]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[true]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
@@ -6048,9 +6156,6 @@ send("finished", agent);]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[pushProtocol]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[true]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[restoreEntityLocationOnExit]]></Name>
@@ -6072,7 +6177,6 @@ send("finished", agent);]]></Code>
 							<Value Class="CodeValue">
 								<Code><![CDATA[peopleServed += 1;
 
-agent.lowerNeeds(5);
 agent.bathroomNeed = 100;
 agent.shapeBody.setFillColor(gray);
 
@@ -6687,7 +6791,7 @@ agent.setLocation(main.parkNode);]]></Code>
 	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
-		<Width>900</Width>
+		<Width>1060</Width>
 		<Height>660</Height>
 	</Frame>
 	<Database>
