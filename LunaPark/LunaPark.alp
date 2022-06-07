@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.12.202205231125" AlpVersion="8.7.5">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.12.202205250418" AlpVersion="8.7.5">
 <Model>
 	<Id>1650470258894</Id>
 	<Name><![CDATA[LunaPark]]></Name>
@@ -322,9 +322,8 @@
 						<Expression><![CDATA[]]></Expression>
 						<Condition><![CDATA[item.inState(item.GoHome)]]></Condition>
 					</StatisticsItem>
-					<InEnvironment>true</InEnvironment>	
 					<InitialSpeedCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
+						<Code><![CDATA[0.3]]></Code>
 						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 					</InitialSpeedCode>
 					<InitialLocationType>NODE</InitialLocationType>
@@ -395,7 +394,6 @@
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
 					<InitialSpeedCode Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
 						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
@@ -695,7 +693,6 @@
 						<Code><![CDATA[30]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
 					<InitialSpeedCode Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
 						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
@@ -793,9 +790,6 @@
 					</GenericParameterSubstitute>
 					<Parameters>
 						<Parameter>
-							<Name><![CDATA[number]]></Name>
-						</Parameter>
-						<Parameter>
 							<Name><![CDATA[x]]></Name>
 						</Parameter>
 						<Parameter>
@@ -804,10 +798,9 @@
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
-						<Code><![CDATA[3]]></Code>
+						<Code><![CDATA[4]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
 					<InitialSpeedCode Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
 						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
@@ -1244,6 +1237,10 @@
 							</Parameter>
 							<Parameter>
 								<Name><![CDATA[maxSpeed]]></Name>
+								<Value Class="CodeUnitValue">
+									<Code><![CDATA[0.3]]></Code>
+									<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+								</Value>
 							</Parameter>
 							<Parameter>
 								<Name><![CDATA[accessRestricted]]></Name>
@@ -1412,9 +1409,16 @@
 							</Parameter>
 							<Parameter>
 								<Name><![CDATA[speedRestricted]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[true]]></Code>
+								</Value>
 							</Parameter>
 							<Parameter>
 								<Name><![CDATA[maxSpeed]]></Name>
+								<Value Class="CodeUnitValue">
+									<Code><![CDATA[0.3]]></Code>
+									<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+								</Value>
 							</Parameter>
 							<Parameter>
 								<Name><![CDATA[accessRestricted]]></Name>
@@ -1586,9 +1590,16 @@
 							</Parameter>
 							<Parameter>
 								<Name><![CDATA[speedRestricted]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[true]]></Code>
+								</Value>
 							</Parameter>
 							<Parameter>
 								<Name><![CDATA[maxSpeed]]></Name>
+								<Value Class="CodeUnitValue">
+									<Code><![CDATA[0.3]]></Code>
+									<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+								</Value>
 							</Parameter>
 							<Parameter>
 								<Name><![CDATA[accessRestricted]]></Name>
@@ -1672,7 +1683,7 @@
 					<LineMaterial>null</LineMaterial>
 					<FillMaterial>null</FillMaterial>
 					<LineStyle>DASHED</LineStyle>
-					<AttractorsLayout>arranged</AttractorsLayout>
+					<AttractorsLayout>random</AttractorsLayout>
 					<Sloped>false</Sloped>
 					<Slope>
 						<Id>1653723557023</Id>
@@ -2264,7 +2275,7 @@
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="50">
-						<EntryAction><![CDATA[shapeBody.setFillColor(gray)]]></EntryAction>
+						<EntryAction><![CDATA[shapeBody.setFillColor(gray);]]></EntryAction>
 						<FillColor>-4144960</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -2601,7 +2612,8 @@ main.remove_visitors(this);]]></Action>
 						<Point><X>0</X><Y>40</Y></Point>
 					</Points>
 					<Properties Target="1650550391174">
-						<Action><![CDATA[moveTo(main.parkNode)]]></Action>
+						<Action><![CDATA[moveTo(main.parkNode);
+this.setSpeed(0.3, MPS);]]></Action>
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="checkNeeds" ParentStateId="1653295382625">
@@ -3870,6 +3882,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 			<Id>1652625617554</Id>
 			<Name><![CDATA[Stall]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<StartupCode><![CDATA[this.setXY(uniform(0,430), 400);]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1652625617552</Id>
@@ -3890,7 +3903,7 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 			<AgentProperties>
 	 			<SpaceType>CONTINUOUS</SpaceType>			
 				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
-				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationTowardsMovement>false</RotateAnimationTowardsMovement>
 				<RotateAnimationVertically>false</RotateAnimationVertically>
 				<VelocityCode Class="CodeUnitValue">
 					<Code><![CDATA[10]]></Code>
@@ -6014,6 +6027,7 @@ agent.spentMoney += this.price;]]></Code>
 			<Id>1653463409525</Id>
 			<Name><![CDATA[Bathroom]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<StartupCode><![CDATA[this.setXY(430,uniform(30,300)); //uniform(0,330)]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1653463409523</Id>
@@ -6118,27 +6132,6 @@ agent.spentMoney += this.price;]]></Code>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
 					</Properties>
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1653463409554</Id>
-					<Name><![CDATA[number]]></Name>
-					<X>50</X><Y>110</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[int]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<ParameterEditor>
-							<Id>0</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1653463409557</Id>
@@ -7381,10 +7374,6 @@ agent.setLocation(main.parkNode);]]></Code>
 		</SimulationExperiment>	
 	</Experiments>
 	<ModelResources>
-		<Resource>
-			<Path><![CDATA[C:/Users/alice/Downloads/rides.xlsx]]></Path>
-			<ReferencedFromUserCode>false</ReferencedFromUserCode>
-		</Resource>
 		<Resource>
 			<Path><![CDATA[entrance.png]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
