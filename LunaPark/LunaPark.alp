@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.12.202205250418" AlpVersion="8.7.5">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.12.202205231125" AlpVersion="8.7.5">
 <Model>
 	<Id>1650470258894</Id>
 	<Name><![CDATA[LunaPark]]></Name>
@@ -113,7 +113,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1653233506120</Id>
 					<Name><![CDATA[nVisitorsLeft]]></Name>
-					<X>530</X><Y>430</Y>
+					<X>650</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -125,7 +125,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1653726420496</Id>
 					<Name><![CDATA[nVisitorsEver]]></Name>
-					<X>530</X><Y>460</Y>
+					<X>650</X><Y>560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -137,7 +137,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1653728929364</Id>
 					<Name><![CDATA[impatienceVisitors]]></Name>
-					<X>530</X><Y>490</Y>
+					<X>650</X><Y>590</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -146,12 +146,42 @@
 						<Type><![CDATA[int]]></Type>        
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1654678871548</Id>
+					<Name><![CDATA[itemPosBathroom]]></Name>
+					<X>400</X><Y>-50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1654679066669</Id>
+					<Name><![CDATA[itemPosStall]]></Name>
+					<X>540</X><Y>-50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 			</Variables>
 			<Events>
 				<Event>
 					<Id>1652629362406</Id>
 					<Name><![CDATA[eventVisitorArrives]]></Name>
-					<X>530</X><Y>40</Y>
+					<X>760</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -162,7 +192,7 @@
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
 						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[5]]></Code>
+							<Code><![CDATA[0.5]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 						</Rate>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
@@ -184,7 +214,7 @@
 				<AgentLink>
 					<Id>1650470258895</Id>
 					<Name><![CDATA[connections]]></Name>
-					<X>50</X><Y>-50</Y>
+					<X>150</X><Y>-180</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -206,7 +236,7 @@
 				<EmbeddedObject>
 					<Id>1650471310159</Id>
 					<Name><![CDATA[visitors]]></Name>
-					<X>530</X><Y>390</Y>
+					<X>650</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -684,9 +714,6 @@
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
 					<Parameters>
-						<Parameter>
-							<Name><![CDATA[number]]></Name>
-						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -789,12 +816,6 @@
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
 					<Parameters>
-						<Parameter>
-							<Name><![CDATA[x]]></Name>
-						</Parameter>
-						<Parameter>
-							<Name><![CDATA[y]]></Name>
-						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -977,7 +998,7 @@
     			<TimePlot>
 					<Id>1653233104083</Id>
 					<Name><![CDATA[plot]]></Name>
-					<X>480</X><Y>50</Y>
+					<X>620</X><Y>-10</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1074,7 +1095,7 @@
 				<Network>
 					<Id>1653484958878</Id>
 					<Name><![CDATA[network]]></Name>
-					<X>150</X><Y>-20</Y>
+					<X>250</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1085,7 +1106,7 @@
 				<PointNode>
 					<Id>1653484890361</Id>
 					<Name><![CDATA[entranceNode]]></Name>
-					<X>150</X><Y>0</Y>
+					<X>300</X><Y>40</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1105,7 +1126,7 @@
 				<Path SourceId="1653484890361" TargetId="1653396804308">
 					<Id>1653484957268</Id>
 					<Name><![CDATA[entrancePathNode]]></Name>
-					<X>150</X><Y>10</Y>
+					<X>300</X><Y>50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1125,9 +1146,9 @@
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>17.8</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>20</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>20</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>50</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>50</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
 					<SpeedLimit>true</SpeedLimit>
@@ -1141,7 +1162,7 @@
 				<RectangleNode>
 					<Id>1653396804308</Id>
 					<Name><![CDATA[parkNode]]></Name>
-					<X>-50</X><Y>30</Y>
+					<X>100</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1342,13 +1363,13 @@
 					</Slope>
 
 					<Width>400</Width>
-					<Height>310</Height>
+					<Height>400</Height>
 					<Rotation>0.0</Rotation>
 				</RectangleNode>
 				<Path SourceId="1653396804308" TargetId="1653555724922">
 					<Id>1653555954793</Id>
 					<Name><![CDATA[path]]></Name>
-					<X>80</X><Y>340</Y>
+					<X>200</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1368,9 +1389,9 @@
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>20</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
-						<Point><X>140</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>50</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>140</X><Y>30</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
@@ -1384,7 +1405,7 @@
 				<PolygonNode>
 					<Id>1653555724922</Id>
 					<Name><![CDATA[foodDistrictNode]]></Name>
-					<X>-30</X><Y>360</Y>
+					<X>100</X><Y>550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1521,15 +1542,15 @@
 
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>70</Y></Point>
-						<Point><X>470</X><Y>70</Y></Point>
-						<Point><X>470</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>50</Y></Point>
+						<Point><X>400</X><Y>50</Y></Point>
+						<Point><X>400</X><Y>0</Y></Point>
 					</Points>
 				</PolygonNode>
 				<Path SourceId="1653723557025" TargetId="1653555724922">
 					<Id>1653556000090</Id>
 					<Name><![CDATA[path1]]></Name>
-					<X>430</X><Y>320</Y>
+					<X>570</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1547,11 +1568,14 @@
 					</Width>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>2.4879999999999995</X><Y>-24.876</Y><Z>0</Z></Point>
+						<Point><X>2.488</X><Y>-24.876</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>40</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>15</Y><Z>0</Z></Point>
-						<Point><X>72</X><Y>20</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>70</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>45</Y><Z>0</Z></Point>
+						<Point><X>-24.997</X><Y>70.412</Y><Z>0</Z></Point>
+						<Point><X>-70</X><Y>71.154</Y><Z>0</Z></Point>
+						<Point><X>-45.003</X><Y>70.742</Y><Z>0</Z></Point>
+						<Point><X>2</X><Y>51.154</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
@@ -1565,7 +1589,7 @@
 				<RectangleNode>
 					<Id>1653723557025</Id>
 					<Name><![CDATA[bathroomNode]]></Name>
-					<X>390</X><Y>30</Y>
+					<X>550</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1700,14 +1724,14 @@
 						<SlopeType>angle</SlopeType>	
 					</Slope>
 
-					<Width>80</Width>
-					<Height>290</Height>
+					<Width>50</Width>
+					<Height>400</Height>
 					<Rotation>0.0</Rotation>
 				</RectangleNode>
 				<Path SourceId="1653723557025" TargetId="1653396804308">
 					<Id>1653723796027</Id>
 					<Name><![CDATA[path2]]></Name>
-					<X>390</X><Y>50</Y>
+					<X>550</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1725,11 +1749,11 @@
 					</Width>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
 						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-40</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-15</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>30</X><Y>1</Y><Z>0</Z></Point>
+						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-50</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
@@ -1743,7 +1767,7 @@
 				<Path SourceId="1653396804308" TargetId="1653723557025">
 					<Id>1653723808428</Id>
 					<Name><![CDATA[path3]]></Name>
-					<X>350</X><Y>300</Y>
+					<X>500</X><Y>370</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1761,11 +1785,11 @@
 					</Width>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-24.992</X><Y>-0.625</Y><Z>0</Z></Point>
 						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>40</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>15</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>70</X><Y>-1</Y><Z>0</Z></Point>
+						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>50</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
@@ -1779,7 +1803,7 @@
 				<Path SourceId="1653396804308" TargetId="1653555724922">
 					<Id>1653723813530</Id>
 					<Name><![CDATA[path4]]></Name>
-					<X>220</X><Y>340</Y>
+					<X>400</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1797,11 +1821,11 @@
 					</Width>
 					<Points>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>-4.9030000000000005</X><Y>-24.515</Y><Z>0</Z></Point>
+						<Point><X>-4.903</X><Y>-24.515</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>20</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>-5</Y><Z>0</Z></Point>
-						<Point><X>-25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>50</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>-25</X><Y>30</Y><Z>0</Z></Point>
 					</Points>
 					<Bidirectional>true</Bidirectional>
 					<SpeedLimit>false</SpeedLimit>
@@ -1819,7 +1843,7 @@
 				<Image>
 					<Id>1653485761239</Id>
 					<Name><![CDATA[image]]></Name>
-					<X>130</X><Y>-30</Y>
+					<X>280</X><Y>10</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1841,7 +1865,7 @@
     			<TimeStackChart>
 					<Id>1653729131717</Id>
 					<Name><![CDATA[chart]]></Name>
-					<X>690</X><Y>50</Y>
+					<X>620</X><Y>200</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3882,7 +3906,8 @@ this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
 			<Id>1652625617554</Id>
 			<Name><![CDATA[Stall]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<StartupCode><![CDATA[this.setXY(uniform(0,430), 400);]]></StartupCode>
+			<StartupCode><![CDATA[main.itemPosStall += 30;
+this.setXY(main.itemPosStall, 575);]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1652625617552</Id>
@@ -5782,27 +5807,6 @@ agent.spentMoney += this.price;]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
-				<Variable Class="Parameter">
-					<Id>1653296788659</Id>
-					<Name><![CDATA[number]]></Name>
-					<X>50</X><Y>60</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[int]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<ParameterEditor>
-							<Id>1653296788657</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
 			</Variables>
 			<StatechartElements>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -6027,7 +6031,8 @@ agent.spentMoney += this.price;]]></Code>
 			<Id>1653463409525</Id>
 			<Name><![CDATA[Bathroom]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<StartupCode><![CDATA[this.setXY(430,uniform(30,300)); //uniform(0,330)]]></StartupCode>
+			<StartupCode><![CDATA[main.itemPosBathroom += 50;
+this.setXY(575, main.itemPosBathroom); //uniform(30,300)]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1653463409523</Id>
@@ -6124,7 +6129,7 @@ agent.spentMoney += this.price;]]></Code>
 				<Variable Class="PlainVariable">
 					<Id>1653467096889</Id>
 					<Name><![CDATA[peopleServed]]></Name>
-					<X>50</X><Y>260</Y>
+					<X>50</X><Y>70</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6132,48 +6137,6 @@ agent.spentMoney += this.price;]]></Code>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
 					</Properties>
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1653463409557</Id>
-					<Name><![CDATA[x]]></Name>
-					<X>50</X><Y>160</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[int]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<ParameterEditor>
-							<Id>0</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1653463409559</Id>
-					<Name><![CDATA[y]]></Name>
-					<X>50</X><Y>210</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[int]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<ParameterEditor>
-							<Id>0</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
 				</Variable>
 			</Variables>
 			<Connectors>
@@ -6246,7 +6209,7 @@ agent.spentMoney += this.price;]]></Code>
 				<Connector>
 					<Id>1653463601064</Id>
 					<Name><![CDATA[connector]]></Name>
-					<X>280</X><Y>70</Y>
+					<X>240</X><Y>70</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6273,7 +6236,7 @@ agent.spentMoney += this.price;]]></Code>
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>40</X><Y>0</Y></Point>
+						<Point><X>80</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -6318,7 +6281,7 @@ agent.spentMoney += this.price;]]></Code>
 				<EmbeddedObject>
 					<Id>1653463600991</Id>
 					<Name><![CDATA[enterBathroom]]></Name>
-					<X>260</X><Y>60</Y>
+					<X>220</X><Y>60</Y>
 					<Label><X>-5</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
