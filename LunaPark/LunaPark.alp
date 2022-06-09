@@ -2310,13 +2310,13 @@ finishSimulation();]]></Action>
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1654758938547</Id>
 					<Name><![CDATA[eventSlider]]></Name>
-					<X>650</X><Y>620</Y>
+					<X>640</X><Y>620</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<BasicProperties Width="100" Height="30">
+					<BasicProperties Width="80" Height="20">
                         <EmbeddedIcon>false</EmbeddedIcon>	
 						<Enabled>true</Enabled>
 					</BasicProperties>
@@ -2418,6 +2418,30 @@ finishSimulation();]]></Action>
 					</Font>
 					<Alignment>CENTER</Alignment>
 				</Text>
+				<Control Type="EditBox">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1654763717125</Id>
+					<Name><![CDATA[editbox]]></Name>
+					<X>720</X><Y>620</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<BasicProperties Width="30" Height="20">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
+						<FillColor/>
+						<TextColor/>
+						<Enabled>true</Enabled>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<MinValue><![CDATA[0.1]]></MinValue>
+						<MaxValue><![CDATA[30]]></MaxValue>
+						<LinkTo>true</LinkTo>
+						<Link>visitorsPerMinute</Link>
+					</ExtendedProperties>
+				</Control>
 			</Presentation>
 
 				</Level>
@@ -5029,7 +5053,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="PlainVariable">
 					<Id>1653725553914</Id>
 					<Name><![CDATA[nServed]]></Name>
-					<X>210</X><Y>160</Y>
+					<X>290</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5044,7 +5068,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978848</Id>
 					<Name><![CDATA[name]]></Name>
-					<X>50</X><Y>120</Y>
+					<X>130</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5065,7 +5089,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978851</Id>
 					<Name><![CDATA[price]]></Name>
-					<X>50</X><Y>170</Y>
+					<X>130</X><Y>250</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5086,7 +5110,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978852</Id>
 					<Name><![CDATA[ridingTime]]></Name>
-					<X>50</X><Y>220</Y>
+					<X>130</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5107,7 +5131,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978853</Id>
 					<Name><![CDATA[excitement]]></Name>
-					<X>50</X><Y>270</Y>
+					<X>130</X><Y>350</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5128,7 +5152,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978854</Id>
 					<Name><![CDATA[intesity]]></Name>
-					<X>50</X><Y>320</Y>
+					<X>130</X><Y>400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5149,7 +5173,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978856</Id>
 					<Name><![CDATA[maxLineLength]]></Name>
-					<X>50</X><Y>370</Y>
+					<X>130</X><Y>450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5170,7 +5194,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978857</Id>
 					<Name><![CDATA[capacity]]></Name>
-					<X>50</X><Y>420</Y>
+					<X>130</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5193,7 +5217,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Connector>
 					<Id>1652691083331</Id>
 					<Name><![CDATA[connector1]]></Name>
-					<X>330</X><Y>50</Y>
+					<X>410</X><Y>130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5211,22 +5235,22 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[lunapark]]></PackageName>
 						<ClassName><![CDATA[Ride]]></ClassName>
-						<ItemName><![CDATA[goOnRide]]></ItemName>
+						<ItemName><![CDATA[hold]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[Delay]]></ClassName>
+						<ClassName><![CDATA[Hold]]></ClassName>
 						<ItemName><![CDATA[in]]></ItemName>
 					</TargetConnectableItemReference>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>30</X><Y>0</Y></Point>
+						<Point><X>40</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1653320138303</Id>
 					<Name><![CDATA[connector2]]></Name>
-					<X>230</X><Y>50</Y>
+					<X>310</X><Y>130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5259,7 +5283,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Connector>
 					<Id>1653397514308</Id>
 					<Name><![CDATA[connector3]]></Name>
-					<X>450</X><Y>50</Y>
+					<X>600</X><Y>130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5292,7 +5316,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Connector>
 					<Id>1653398162592</Id>
 					<Name><![CDATA[connector]]></Name>
-					<X>250</X><Y>50</Y>
+					<X>330</X><Y>130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5325,7 +5349,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Connector>
 					<Id>1653398215513</Id>
 					<Name><![CDATA[connector4]]></Name>
-					<X>240</X><Y>60</Y>
+					<X>320</X><Y>140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5353,14 +5377,14 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>40</Y></Point>
-						<Point><X>210</X><Y>40</Y></Point>
-						<Point><X>210</X><Y>-10</Y></Point>
+						<Point><X>280</X><Y>40</Y></Point>
+						<Point><X>280</X><Y>-10</Y></Point>
 					</Points>
 				</Connector>
 				<Connector>
 					<Id>1653398273611</Id>
 					<Name><![CDATA[connector5]]></Name>
-					<X>320</X><Y>40</Y>
+					<X>400</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5388,11 +5412,121 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>40</Y></Point>
-						<Point><X>130</X><Y>40</Y></Point>
-						<Point><X>130</X><Y>10</Y></Point>
+						<Point><X>200</X><Y>40</Y></Point>
+						<Point><X>200</X><Y>10</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1654767310950</Id>
+					<Name><![CDATA[connector6]]></Name>
+					<X>510</X><Y>130</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[lunapark]]></PackageName>
+						<ClassName><![CDATA[Ride]]></ClassName>
+						<ItemName><![CDATA[goOnRide]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Delay]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[lunapark]]></PackageName>
+						<ClassName><![CDATA[Ride]]></ClassName>
+						<ItemName><![CDATA[hold]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Hold]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-40</X><Y>0</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
+			<Events>
+				<Event>
+					<Id>1654765477185</Id>
+					<Name><![CDATA[eventWaitForResume]]></Name>
+					<X>290</X><Y>290</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1654848000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[2 * ridingTime]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[ridingTime / 2]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if (this.goOnRide.size() != capacity) {
+	hold.block();
+	for (int i=0; i< goOnRide.size(); i++) {
+	   	Visitor currentAgent = ((Visitor)goOnRide.get(i));
+		goOnRide.resume(currentAgent);
+		currentAgent.shapeBody.setFillColor(dodgerBlue);
+	}
+}]]></Action>
+				</Event>
+				<Event>
+					<Id>1654766447031</Id>
+					<Name><![CDATA[eventResumeIfFull]]></Name>
+					<X>290</X><Y>330</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1654848000000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[if (this.goOnRide.size() == capacity) {
+	for (int i=0; i< goOnRide.size(); i++) {
+   		Visitor currentAgent = ((Visitor)goOnRide.get(i));
+		goOnRide.resume(currentAgent);
+		currentAgent.shapeBody.setFillColor(dodgerBlue);
+	}
+}]]></Action>
+				</Event>
+			</Events>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1652687978842</Id>
@@ -5435,7 +5569,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<EmbeddedObject>
 					<Id>1652691081379</Id>
 					<Name><![CDATA[enter]]></Name>
-					<X>150</X><Y>40</Y>
+					<X>230</X><Y>120</Y>
 					<Label><X>-5</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5589,7 +5723,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<EmbeddedObject>
 					<Id>1652691085030</Id>
 					<Name><![CDATA[exit]]></Name>
-					<X>450</X><Y>40</Y>
+					<X>600</X><Y>120</Y>
 					<Label><X>-10</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5661,7 +5795,7 @@ send("finished", agent);]]></Code>
 				<EmbeddedObject>
 					<Id>1653319899383</Id>
 					<Name><![CDATA[goOnRide]]></Name>
-					<X>360</X><Y>30</Y>
+					<X>510</X><Y>110</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5721,12 +5855,7 @@ send("finished", agent);]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.shapeBody.setFillColor(dodgerBlue);
-
-agent.money -= this.price;
-agent.spentMoney += this.price;
-
-main.profit += this.price;]]></Code>
+								<Code><![CDATA[this.goOnRide.suspend(agent);]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -5734,6 +5863,14 @@ main.profit += this.price;]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[hold.unblock();
+
+agent.money -= this.price;
+agent.spentMoney += this.price;
+
+main.profit += this.price;]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onRemove]]></Name>
@@ -5781,7 +5918,7 @@ main.profit += this.price;]]></Code>
 				<EmbeddedObject>
 					<Id>1653320135461</Id>
 					<Name><![CDATA[rideQueue]]></Name>
-					<X>290</X><Y>30</Y>
+					<X>370</X><Y>110</Y>
 					<Label><X>-5</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5850,7 +5987,11 @@ main.profit += this.price;]]></Code>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[agent.shapeBody.setFillColor(cyan);]]></Code>
+								<Code><![CDATA[agent.shapeBody.setFillColor(cyan);
+
+if (this.goOnRide.size() == this.capacity) {
+	hold.block();
+}]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -5914,7 +6055,7 @@ main.profit += this.price;]]></Code>
 				<EmbeddedObject>
 					<Id>1653398160266</Id>
 					<Name><![CDATA[canEnter]]></Name>
-					<X>220</X><Y>40</Y>
+					<X>300</X><Y>120</Y>
 					<Label><X>-25</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5998,6 +6139,84 @@ main.profit += this.price;]]></Code>
 					<QuantityColumn>
 					</QuantityColumn>
 				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1654767220820</Id>
+					<Name><![CDATA[hold]]></Name>
+					<X>450</X><Y>120</Y>
+					<Label><X>-10</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[Hold]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[Hold]]></ClassName>
+							<ItemName><![CDATA[1412336242940]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[mode]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[nEntitiesForSelfBlock]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[capacity]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[condition]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[initiallyBlocked]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
 			</EmbeddedObjects>
 
 			<Presentation>
@@ -6028,7 +6247,7 @@ main.profit += this.price;]]></Code>
 				<Path SourceId="1653318674955" TargetId="1653318690691">
 					<Id>1653318640471</Id>
 					<Name><![CDATA[path]]></Name>
-					<X>-40</X><Y>50</Y>
+					<X>40</X><Y>130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6082,7 +6301,7 @@ main.profit += this.price;]]></Code>
 				<PointNode>
 					<Id>1653318674955</Id>
 					<Name><![CDATA[queueStart]]></Name>
-					<X>-40</X><Y>40</Y>
+					<X>40</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6102,7 +6321,7 @@ main.profit += this.price;]]></Code>
 				<PointNode>
 					<Id>1653318690691</Id>
 					<Name><![CDATA[queueEnd]]></Name>
-					<X>40</X><Y>40</Y>
+					<X>120</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6126,7 +6345,7 @@ main.profit += this.price;]]></Code>
 				<Text>
 					<Id>1653556150627</Id>
 					<Name><![CDATA[rideText]]></Name>
-					<X>0</X><Y>10</Y>
+					<X>80</X><Y>90</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6147,7 +6366,7 @@ main.profit += this.price;]]></Code>
 				<Image>
 					<Id>1653556807369</Id>
 					<Name><![CDATA[rideImage]]></Name>
-					<X>-20</X><Y>-30</Y>
+					<X>60</X><Y>50</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
