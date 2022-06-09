@@ -113,7 +113,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1653233506120</Id>
 					<Name><![CDATA[nVisitorsLeft]]></Name>
-					<X>650</X><Y>530</Y>
+					<X>650</X><Y>540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -125,7 +125,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1653726420496</Id>
 					<Name><![CDATA[nVisitorsEver]]></Name>
-					<X>650</X><Y>560</Y>
+					<X>650</X><Y>570</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -137,7 +137,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1653728929364</Id>
 					<Name><![CDATA[impatienceVisitors]]></Name>
-					<X>650</X><Y>590</Y>
+					<X>810</X><Y>630</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -176,12 +176,81 @@
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1654757144043</Id>
+					<Name><![CDATA[unspentMoneyTotal]]></Name>
+					<X>810</X><Y>570</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1654757280237</Id>
+					<Name><![CDATA[unspentMoneyMean]]></Name>
+					<X>810</X><Y>600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1654758974787</Id>
+					<Name><![CDATA[visitorsPerMinute]]></Name>
+					<X>650</X><Y>600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[3]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1654760355948</Id>
+					<Name><![CDATA[profit]]></Name>
+					<X>810</X><Y>510</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1654761871692</Id>
+					<Name><![CDATA[profitPerVisitor]]></Name>
+					<X>810</X><Y>540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
 			</Variables>
 			<Events>
 				<Event>
 					<Id>1652629362406</Id>
 					<Name><![CDATA[eventVisitorArrives]]></Name>
-					<X>760</X><Y>490</Y>
+					<X>650</X><Y>-50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -192,7 +261,7 @@
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 						</Timeout>
 						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[0.5]]></Code>
+							<Code><![CDATA[visitorsPerMinute]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
 						</Rate>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
@@ -209,12 +278,44 @@
 					</Properties>
 					<Action><![CDATA[add_visitors();]]></Action>
 				</Event>
+				<Event>
+					<Id>1654760478614</Id>
+					<Name><![CDATA[day]]></Name>
+					<X>90</X><Y>40</Y>
+					<Label><X>10</X><Y>-5</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1654761600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[60*12]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[dayImg.setIndex(1);
+finishSimulation();]]></Action>
+				</Event>
 			</Events>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1650470258895</Id>
 					<Name><![CDATA[connections]]></Name>
-					<X>150</X><Y>-180</Y>
+					<X>10</X><Y>-200</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -236,7 +337,7 @@
 				<EmbeddedObject>
 					<Id>1650471310159</Id>
 					<Name><![CDATA[visitors]]></Name>
-					<X>650</X><Y>490</Y>
+					<X>650</X><Y>510</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -266,7 +367,7 @@
 						<Parameter>
 							<Name><![CDATA[patience]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[(int) normal(30, 120)]]></Code>
+								<Code><![CDATA[(int) normal(30, 120, 50, 30)]]></Code>
 							</Value>
 						</Parameter>
 					</Parameters>
@@ -351,6 +452,27 @@
 						<Type>count</Type>
 						<Expression><![CDATA[]]></Expression>
 						<Condition><![CDATA[item.inState(item.GoHome)]]></Condition>
+					</StatisticsItem>
+					<StatisticsItem>
+						<Id>1654699836617</Id>
+						<Name><![CDATA[avgIntensity]]></Name>
+						<Type>average</Type>
+						<Expression><![CDATA[item.intensity]]></Expression>
+						<Condition><![CDATA[]]></Condition>
+					</StatisticsItem>
+					<StatisticsItem>
+						<Id>1654699847049</Id>
+						<Name><![CDATA[avgExcitement]]></Name>
+						<Type>average</Type>
+						<Expression><![CDATA[item.excitement]]></Expression>
+						<Condition><![CDATA[]]></Condition>
+					</StatisticsItem>
+					<StatisticsItem>
+						<Id>1654760770150</Id>
+						<Name><![CDATA[pat]]></Name>
+						<Type>min</Type>
+						<Expression><![CDATA[item.patience]]></Expression>
+						<Condition><![CDATA[]]></Condition>
 					</StatisticsItem>
 					<InitialSpeedCode Class="CodeUnitValue">
 						<Code><![CDATA[0.3]]></Code>
@@ -717,9 +839,16 @@
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
-						<Code><![CDATA[30]]></Code>
+						<Code><![CDATA[40]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<StatisticsItem>
+						<Id>1654759940104</Id>
+						<Name><![CDATA[takenStat]]></Name>
+						<Type>count</Type>
+						<Expression><![CDATA[]]></Expression>
+						<Condition><![CDATA[item.inState(item.inUse);]]></Condition>
+					</StatisticsItem>
 					<InitialSpeedCode Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
 						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
@@ -819,9 +948,23 @@
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
-						<Code><![CDATA[4]]></Code>
+						<Code><![CDATA[3]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<StatisticsItem>
+						<Id>1654757848230</Id>
+						<Name><![CDATA[bathroomQueueAvg]]></Name>
+						<Type>average</Type>
+						<Expression><![CDATA[item.bathroomQueue.size()]]></Expression>
+						<Condition><![CDATA[]]></Condition>
+					</StatisticsItem>
+					<StatisticsItem>
+						<Id>1654757879203</Id>
+						<Name><![CDATA[atBathroomAvg]]></Name>
+						<Type>average</Type>
+						<Expression><![CDATA[item.atBathroom.size()]]></Expression>
+						<Condition><![CDATA[]]></Condition>
+					</StatisticsItem>
 					<InitialSpeedCode Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
 						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
@@ -974,6 +1117,50 @@
 					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 
 			<Presentation>
+				<Rectangle>
+					<Id>1654759228240</Id>
+					<Name><![CDATA[rectangle1]]></Name>
+					<X>790</X><Y>490</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>150</Width>
+					<Height>160</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Rectangle>
+					<Id>1654759114022</Id>
+					<Name><![CDATA[rectangle]]></Name>
+					<X>630</X><Y>490</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>140</Width>
+					<Height>160</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
 				<EmbeddedObjectPresentation>
 					<Id>1653463450872</Id>
 					<Name><![CDATA[bathrooms_presentation]]></Name>
@@ -998,7 +1185,7 @@
     			<TimePlot>
 					<Id>1653233104083</Id>
 					<Name><![CDATA[plot]]></Name>
-					<X>620</X><Y>-10</Y>
+					<X>620</X><Y>-20</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1016,14 +1203,14 @@
 						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>210</Width>
+					<Width>160</Width>
 					<Height>260</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>30</XOffset>
 						<YOffset>30</YOffset>
-						<Width>150</Width>
+						<Width>100</Width>
 						<Height>100</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
@@ -1048,40 +1235,40 @@
 					<DrawLine>true</DrawLine>
 					<Interpolation>LINEAR</Interpolation>
 					<DatasetExpression>  
-						<Title><![CDATA[averageMoney]]></Title>
+						<Title><![CDATA[Money (avg)]]></Title>
 					<Id>0</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-16711681</Color>
 					<Expression2><![CDATA[visitors.averageMoney()]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
+						<LineWidth>2.0</LineWidth>
 					</DatasetExpression>
 					<DatasetExpression>  
-						<Title><![CDATA[averageHunger]]></Title>
+						<Title><![CDATA[Hunger (avg)]]></Title>
 					<Id>0</Id>
 					<Expression><![CDATA[my_dataset1]]></Expression>
-					<Color>-16711936</Color>
+					<Color>-16776961</Color>
 					<Expression2><![CDATA[visitors.averageHunger()]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
 					<DatasetExpression>  
-						<Title><![CDATA[averageBathroom]]></Title>
+						<Title><![CDATA[Bathroom (avg)]]></Title>
 					<Id>0</Id>
 					<Expression><![CDATA[my_dataset2]]></Expression>
-					<Color>-10496</Color>
+					<Color>-9807155</Color>
 					<Expression2><![CDATA[visitors.averageBathroom()]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
 					<DatasetExpression>  
-						<Title><![CDATA[averageEnergy]]></Title>
+						<Title><![CDATA[Energy (avg)]]></Title>
 					<Id>0</Id>
 					<Expression><![CDATA[my_dataset3]]></Expression>
-					<Color>-38476</Color>
+					<Color>-4144960</Color>
 					<Expression2><![CDATA[visitors.averageEnergy()]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
@@ -1865,7 +2052,7 @@
     			<TimeStackChart>
 					<Id>1653729131717</Id>
 					<Name><![CDATA[chart]]></Name>
-					<X>620</X><Y>200</Y>
+					<X>790</X><Y>-20</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1883,14 +2070,14 @@
 						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>210</Width>
+					<Width>160</Width>
 					<Height>260</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>30</XOffset>
 						<YOffset>30</YOffset>
-						<Width>150</Width>
+						<Width>100</Width>
 						<Height>100</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
@@ -1955,6 +2142,282 @@
 					<VerScaleType>AUTO</VerScaleType>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimeStackChart>
+    			<TimePlot>
+					<Id>1654699559810</Id>
+					<Name><![CDATA[plot1]]></Name>
+					<X>620</X><Y>240</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1654761600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>150</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>30</XOffset>
+						<YOffset>20</YOffset>
+						<Width>100</Width>
+						<Height>100</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>60</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Intesity (avg)]]></Title>
+					<Id>0</Id>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-6632142</Color>
+					<Expression2><![CDATA[visitors.avgIntensity()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Excitement (avg)]]></Title>
+					<Id>0</Id>
+					<Expression><![CDATA[my_dataset1]]></Expression>
+					<Color>-16744448</Color>
+					<Expression2><![CDATA[visitors.avgExcitement()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
+    			<TimePlot>
+					<Id>1654758085360</Id>
+					<Name><![CDATA[plot2]]></Name>
+					<X>790</X><Y>240</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1654761600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>150</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>30</XOffset>
+						<YOffset>20</YOffset>
+						<Width>100</Width>
+						<Height>100</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>60</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Bathr. Queue (avg)]]></Title>
+					<Id>0</Id>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-12004916</Color>
+					<Expression2><![CDATA[bathrooms.bathroomQueueAvg()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Bathr. Using (avg)]]></Title>
+					<Id>0</Id>
+					<Expression><![CDATA[my_dataset1]]></Expression>
+					<Color>-8097537</Color>
+					<Expression2><![CDATA[bathrooms.atBathroomAvg()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Benches Taken (avg)]]></Title>
+					<Id>0</Id>
+					<Expression><![CDATA[my_dataset2]]></Expression>
+					<Color>-60269</Color>
+					<Expression2><![CDATA[benches.takenStat()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
+				<Control Type="Slider">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1654758938547</Id>
+					<Name><![CDATA[eventSlider]]></Name>
+					<X>650</X><Y>620</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<BasicProperties Width="100" Height="30">
+                        <EmbeddedIcon>false</EmbeddedIcon>	
+						<Enabled>true</Enabled>
+					</BasicProperties>
+					<ExtendedProperties>
+						<DefaultValueCode><![CDATA[0]]></DefaultValueCode>
+						<Orientation>HORIZONTAL</Orientation>
+						<MinValue><![CDATA[0.1]]></MinValue>
+						<MaxValue><![CDATA[30]]></MaxValue>
+						<LinkTo>true</LinkTo>
+						<Link>visitorsPerMinute</Link>
+					</ExtendedProperties>
+				</Control>
+				<Text>
+					<Id>1654759165345</Id>
+					<Name><![CDATA[visitorText]]></Name>
+					<X>640</X><Y>470</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Visitors]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>14</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1654759281271</Id>
+					<Name><![CDATA[kpitext]]></Name>
+					<X>790</X><Y>470</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Key Performance Indicators]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>12</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Image>
+					<Id>1654760990433</Id>
+					<Name><![CDATA[dayImg]]></Name>
+					<X>30</X><Y>30</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Width>40</Width>
+					<Height>40</Height>
+					<Rotation>0.0</Rotation>
+					<ImageFiles>
+						<ImageResourceReference>
+							<PackageName><![CDATA[lunapark]]></PackageName>
+							<ClassName><![CDATA[sun.png]]></ClassName>
+						</ImageResourceReference>
+						<ImageResourceReference>
+							<PackageName><![CDATA[lunapark]]></PackageName>
+							<ClassName><![CDATA[moon.png]]></ClassName>
+						</ImageResourceReference>
+					</ImageFiles>
+					<OriginalSize>false</OriginalSize>
+				</Image>
+				<Text>
+					<Id>1654762467743</Id>
+					<Name><![CDATA[closingtext]]></Name>
+					<X>150</X><Y>50</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[(minutes to closing time)]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>10</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>CENTER</Alignment>
+				</Text>
 			</Presentation>
 
 				</Level>
@@ -1988,6 +2451,11 @@
 			<Name><![CDATA[Visitor]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<StartupCode><![CDATA[main.nVisitorsEver += 1;]]></StartupCode>
+			<DestroyCode><![CDATA[main.unspentMoneyTotal += this.unspentMoney;
+main.unspentMoneyMean = main.unspentMoneyTotal / main.nVisitorsLeft;
+
+main.profitPerVisitor =
+	main.profit / main.nVisitorsEver;]]></DestroyCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1650471310151</Id>
@@ -2219,6 +2687,36 @@
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1654699725537</Id>
+					<Name><![CDATA[excitement]]></Name>
+					<X>50</X><Y>230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1654699733230</Id>
+					<Name><![CDATA[intensity]]></Name>
+					<X>50</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1650471310163</Id>
 					<Name><![CDATA[money]]></Name>
@@ -2253,7 +2751,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[30]]></Code>
+							<Code><![CDATA[20]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1650614968438</Id>
@@ -2403,6 +2901,9 @@ moveTo(selectedRide);]]></EntryAction>
 this.hunger += 10 * selectedStall.price;
 this.money -= selectedStall.price;
 this.spentMoney += selectedStall.price;
+
+main.profit += selectedStall.price;
+
 this.lowerNeeds(5);]]></EntryAction>
 						<FillColor>-989556</FillColor>
 					</Properties>
@@ -3030,7 +3531,10 @@ this.setSpeed(0.3, MPS);]]></Action>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1650557192021" Target="1653295382625" Trigger="message">
 						<Action><![CDATA[this.setLocation(selectedRide);
-this.lowerNeeds(selectedRide.ridingTime);]]></Action>
+this.lowerNeeds(selectedRide.ridingTime);
+
+this.excitement += selectedRide.excitement;
+this.intensity += selectedRide.intesity;]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[selectedRide.ridingTime]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
@@ -3654,7 +4158,7 @@ this.selectRandomRide();]]></Action>
 					<ReturnType><![CDATA[boolean]]></ReturnType>
 					<Id>1650549976798</Id>
 					<Name><![CDATA[buyFood]]></Name>
-					<X>50</X><Y>440</Y>
+					<X>50</X><Y>540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3666,7 +4170,7 @@ this.selectRandomRide();]]></Action>
 					<ReturnType><![CDATA[boolean]]></ReturnType>
 					<Id>1650556085770</Id>
 					<Name><![CDATA[isTired]]></Name>
-					<X>50</X><Y>270</Y>
+					<X>50</X><Y>370</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3680,7 +4184,7 @@ this.selectRandomRide();]]></Action>
 					<ReturnType><![CDATA[boolean]]></ReturnType>
 					<Id>1650556445059</Id>
 					<Name><![CDATA[sitOnBench]]></Name>
-					<X>50</X><Y>410</Y>
+					<X>50</X><Y>510</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3695,7 +4199,7 @@ this.selectRandomRide();]]></Action>
 					<ReturnType><![CDATA[boolean]]></ReturnType>
 					<Id>1650556606389</Id>
 					<Name><![CDATA[goToBathroom]]></Name>
-					<X>50</X><Y>470</Y>
+					<X>50</X><Y>570</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3707,7 +4211,7 @@ this.selectRandomRide();]]></Action>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1650557926358</Id>
 					<Name><![CDATA[selectRandomRide]]></Name>
-					<X>50</X><Y>530</Y>
+					<X>50</X><Y>630</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3719,7 +4223,7 @@ this.selectRandomRide();]]></Action>
 					<ReturnType><![CDATA[boolean]]></ReturnType>
 					<Id>1650614262889</Id>
 					<Name><![CDATA[isNeedingBathroom]]></Name>
-					<X>50</X><Y>330</Y>
+					<X>50</X><Y>430</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3733,7 +4237,7 @@ this.selectRandomRide();]]></Action>
 					<ReturnType><![CDATA[boolean]]></ReturnType>
 					<Id>1650614324519</Id>
 					<Name><![CDATA[isHungry]]></Name>
-					<X>50</X><Y>300</Y>
+					<X>50</X><Y>400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3748,7 +4252,7 @@ this.selectRandomRide();]]></Action>
 					<Id>1650614512433</Id>
 					<Name><![CDATA[lowerNeeds]]></Name>
 					<Description><![CDATA[Everytime a Timeout is used, decrease the needs by the time_passed times some factor]]></Description>
-					<X>50</X><Y>240</Y>
+					<X>50</X><Y>340</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3760,10 +4264,14 @@ this.selectRandomRide();]]></Action>
 					<Body><![CDATA[double energy_factor = 0.6;
 double hunger_factor = 0.5;
 double bathr_factor = 0.5;
+double excit_factor = 0.1;
+double inte_factor = 0.1;
  
 this.energy -= (int) time_passed * energy_factor;
 this.hunger -= (int) time_passed * hunger_factor;
-this.bathroomNeed -= (int) time_passed * bathr_factor;]]></Body>
+this.bathroomNeed -= (int) time_passed * bathr_factor;
+this.excitement -= (int) time_passed * excit_factor;
+this.intensity -= (int) time_passed * inte_factor;]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -5216,7 +5724,9 @@ send("finished", agent);]]></Code>
 								<Code><![CDATA[agent.shapeBody.setFillColor(dodgerBlue);
 
 agent.money -= this.price;
-agent.spentMoney += this.price;]]></Code>
+agent.spentMoney += this.price;
+
+main.profit += this.price;]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -6032,7 +6542,7 @@ agent.spentMoney += this.price;]]></Code>
 			<Name><![CDATA[Bathroom]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<StartupCode><![CDATA[main.itemPosBathroom += 50;
-this.setXY(575, main.itemPosBathroom); //uniform(30,300)]]></StartupCode>
+this.setXY(575, main.itemPosBathroom); ]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1653463409523</Id>
@@ -7395,6 +7905,14 @@ agent.setLocation(main.parkNode);]]></Code>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[Q:/GitHub/lunaparksim/data/rides.xlsx]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+		</Resource>
+		<Resource>
+			<Path><![CDATA[sun.png]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+		</Resource>
+		<Resource>
+			<Path><![CDATA[moon.png]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 	</ModelResources>
