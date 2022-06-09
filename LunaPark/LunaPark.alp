@@ -367,7 +367,7 @@ finishSimulation();]]></Action>
 						<Parameter>
 							<Name><![CDATA[patience]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[(int) normal(30, 120, 50, 30)]]></Code>
+								<Code><![CDATA[(int) normal(30, 120, 60, 20)]]></Code>
 							</Value>
 						</Parameter>
 					</Parameters>
@@ -2374,7 +2374,7 @@ finishSimulation();]]></Action>
 				<Image>
 					<Id>1654760990433</Id>
 					<Name><![CDATA[dayImg]]></Name>
-					<X>30</X><Y>30</Y>
+					<X>30</X><Y>20</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2591,7 +2591,7 @@ main.profitPerVisitor =
 				<Variable Class="PlainVariable">
 					<Id>1650557700315</Id>
 					<Name><![CDATA[selectedRide]]></Name>
-					<X>510</X><Y>530</Y>
+					<X>540</X><Y>610</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2636,7 +2636,7 @@ main.profitPerVisitor =
 				<Variable Class="PlainVariable">
 					<Id>1652686352219</Id>
 					<Name><![CDATA[nRidesDone]]></Name>
-					<X>510</X><Y>570</Y>
+					<X>730</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2651,7 +2651,7 @@ main.profitPerVisitor =
 				<Variable Class="PlainVariable">
 					<Id>1653468652846</Id>
 					<Name><![CDATA[selectedBathroom]]></Name>
-					<X>510</X><Y>470</Y>
+					<X>540</X><Y>550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2663,7 +2663,7 @@ main.profitPerVisitor =
 				<Variable Class="PlainVariable">
 					<Id>1653493979319</Id>
 					<Name><![CDATA[selectedBench]]></Name>
-					<X>510</X><Y>410</Y>
+					<X>540</X><Y>490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2675,7 +2675,7 @@ main.profitPerVisitor =
 				<Variable Class="PlainVariable">
 					<Id>1653493990133</Id>
 					<Name><![CDATA[selectedStall]]></Name>
-					<X>510</X><Y>440</Y>
+					<X>540</X><Y>520</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2687,7 +2687,7 @@ main.profitPerVisitor =
 				<Variable Class="PlainVariable">
 					<Id>1653726666465</Id>
 					<Name><![CDATA[spentMoney]]></Name>
-					<X>510</X><Y>610</Y>
+					<X>730</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2699,7 +2699,7 @@ main.profitPerVisitor =
 				<Variable Class="PlainVariable">
 					<Id>1653728360704</Id>
 					<Name><![CDATA[unspentMoney]]></Name>
-					<X>510</X><Y>640</Y>
+					<X>730</X><Y>560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4438,8 +4438,10 @@ this.intensity -= (int) time_passed * inte_factor;]]></Body>
 			<Id>1652625617554</Id>
 			<Name><![CDATA[Stall]]></Name>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
-			<StartupCode><![CDATA[main.itemPosStall += 30;
-this.setXY(main.itemPosStall, 575);]]></StartupCode>
+			<StartupCode><![CDATA[main.itemPosStall += 35;
+this.setXY(main.itemPosStall, 575);
+
+this.textstall.setText(this.name+"\n(€" + this.price +")");]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1652625617552</Id>
@@ -4941,6 +4943,27 @@ this.setXY(main.itemPosStall, 575);]]></StartupCode>
 					</ImageFiles>
 					<OriginalSize>false</OriginalSize>
 				</Image>
+				<Text>
+					<Id>1654776885058</Id>
+					<Name><![CDATA[textstall]]></Name>
+					<X>0</X><Y>15</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[stallname]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>6</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>CENTER</Alignment>
+				</Text>
 			</Presentation>
 
 				</Level>
@@ -5053,7 +5076,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="PlainVariable">
 					<Id>1653725553914</Id>
 					<Name><![CDATA[nServed]]></Name>
-					<X>290</X><Y>240</Y>
+					<X>100</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5068,7 +5091,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978848</Id>
 					<Name><![CDATA[name]]></Name>
-					<X>130</X><Y>200</Y>
+					<X>100</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5089,7 +5112,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978851</Id>
 					<Name><![CDATA[price]]></Name>
-					<X>130</X><Y>250</Y>
+					<X>100</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5110,7 +5133,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978852</Id>
 					<Name><![CDATA[ridingTime]]></Name>
-					<X>130</X><Y>300</Y>
+					<X>100</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5131,7 +5154,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978853</Id>
 					<Name><![CDATA[excitement]]></Name>
-					<X>130</X><Y>350</Y>
+					<X>100</X><Y>310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5152,7 +5175,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978854</Id>
 					<Name><![CDATA[intesity]]></Name>
-					<X>130</X><Y>400</Y>
+					<X>100</X><Y>360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5173,7 +5196,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978856</Id>
 					<Name><![CDATA[maxLineLength]]></Name>
-					<X>130</X><Y>450</Y>
+					<X>100</X><Y>410</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5194,7 +5217,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Variable Class="Parameter">
 					<Id>1652687978857</Id>
 					<Name><![CDATA[capacity]]></Name>
-					<X>130</X><Y>500</Y>
+					<X>100</X><Y>460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5454,7 +5477,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Event>
 					<Id>1654765477185</Id>
 					<Name><![CDATA[eventWaitForResume]]></Name>
-					<X>290</X><Y>290</Y>
+					<X>260</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5492,7 +5515,7 @@ this.rideImage.setIndex(filenames.indexOf(this.name+".png"));]]></StartupCode>
 				<Event>
 					<Id>1654766447031</Id>
 					<Name><![CDATA[eventResumeIfFull]]></Name>
-					<X>290</X><Y>330</Y>
+					<X>440</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6524,7 +6547,7 @@ if (this.goOnRide.size() == this.capacity) {
 				<Variable Class="PlainVariable">
 					<Id>1653296854632</Id>
 					<Name><![CDATA[occupied]]></Name>
-					<X>50</X><Y>100</Y>
+					<X>230</X><Y>170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
