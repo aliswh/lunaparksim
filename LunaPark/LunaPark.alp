@@ -8297,16 +8297,49 @@ agent.setLocation(main.parkNode);]]></Code>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
 			<MaximumMemory>2048</MaximumMemory>
-			<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
-			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+			<RandomNumberGenerationType>customGenerator</RandomNumberGenerationType>
+			<CustomGeneratorCode>new Random(experimentSeedIteration)</CustomGeneratorCode>
 			<BeforeEachExperimentRunCode><![CDATA[dataProfit2D.reset();
 dataProfitVisitor2D.reset();]]></BeforeEachExperimentRunCode>
 			<AfterSimulationRunCode><![CDATA[dataProfit2D.add( root.datasetProfit );
-dataProfitVisitor2D.add( root.datasetProfitVisitor );]]></AfterSimulationRunCode>
+dataProfitVisitor2D.add( root.datasetProfitVisitor );
+currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 			<SeedValue>1</SeedValue>
 			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
 			<VmArgs><![CDATA[]]></VmArgs>
 			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1655221474214</Id>
+					<Name><![CDATA[experimentSeedIteration]]></Name>
+					<X>60</X><Y>350</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>false</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1655282268383</Id>
+					<Name><![CDATA[currentSimulationNumber]]></Name>
+					<X>60</X><Y>380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>false</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+			</Variables>
 			<AnalysisData>
     			<Histogram2DData>
 					<Id>1654938082145</Id>
@@ -8471,7 +8504,7 @@ dataProfitVisitor2D.add( root.datasetProfitVisitor );]]></AfterSimulationRunCode
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-12171190</Color>
-					<Text><![CDATA[Replication:]]></Text>
+					<Text><![CDATA[Simulations completed:]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
@@ -8488,13 +8521,12 @@ dataProfitVisitor2D.add( root.datasetProfitVisitor );]]></AfterSimulationRunCode
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<VisibleCode><![CDATA[getCurrentIteration() > 0]]></VisibleCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-12042869</Color>
 					<Text><![CDATA[?]]></Text>
-					<TextCode><![CDATA[format(getCurrentReplication())]]></TextCode>
+					<TextCode><![CDATA[""+currentSimulationNumber+"/"+(getMaximumIterations()*10)]]></TextCode>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>12</Size>
@@ -8835,6 +8867,7 @@ dataProfitVisitor2D.add( root.datasetProfitVisitor );]]></AfterSimulationRunCode
     			</Histogram2D>
 			</Presentation>
 
+			<AfterIterationCode><![CDATA[experimentSeedIteration += 1;]]></AfterIterationCode>
 			<AllowParallelEvaluations>true</AllowParallelEvaluations>
 			<UseFreeformParameters>false</UseFreeformParameters>
 			<NumberOfRuns>10</NumberOfRuns>
@@ -8857,7 +8890,7 @@ dataProfitVisitor2D.add( root.datasetProfitVisitor );]]></AfterSimulationRunCode
 					<Code><![CDATA[1]]></Code>
 				</From>
 				<To Class="CodeValue">
-					<Code><![CDATA[30]]></Code>
+					<Code><![CDATA[31]]></Code>
 				</To>
 				<Step Class="CodeValue">
 					<Code><![CDATA[5]]></Code>
