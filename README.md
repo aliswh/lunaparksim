@@ -1,7 +1,8 @@
 # Luna Park simulation in AnyLogic
 
 Project for the course "Simulation" by Prof. Alberto Ceselli at Università degli Studi di Milano. 
-Description [available](https://github.com/aliswh/lunaparksim/blob/main/simulation_report.docx).
+
+Report available [here](https://github.com/aliswh/lunaparksim/blob/main/simulation_report.pdf).
 
 > Made with AnyLogic 8 Personal Learning Edition 8.7.12
 
