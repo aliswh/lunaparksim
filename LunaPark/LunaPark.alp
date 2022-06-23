@@ -8312,7 +8312,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Variable Class="PlainVariable">
 					<Id>1655221474214</Id>
 					<Name><![CDATA[experimentSeedIteration]]></Name>
-					<X>60</X><Y>350</Y>
+					<X>710</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -8327,7 +8327,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Variable Class="PlainVariable">
 					<Id>1655282268383</Id>
 					<Name><![CDATA[currentSimulationNumber]]></Name>
-					<X>60</X><Y>380</Y>
+					<X>710</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -8364,7 +8364,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 					<HorizontalIntervals>6</HorizontalIntervals>
 					<VerticalIntervals>20</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
-					<VerticalRangeToExpression><![CDATA[200000]]></VerticalRangeToExpression>
+					<VerticalRangeToExpression><![CDATA[150000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[1]]></HorizontalRangeFromExpression>
 					<HorizontalRangeToExpression><![CDATA[31]]></HorizontalRangeToExpression>
 					<Envelope>0.25</Envelope>
@@ -8394,7 +8394,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 					<HorizontalIntervals>6</HorizontalIntervals>
 					<VerticalIntervals>10</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
-					<VerticalRangeToExpression><![CDATA[30]]></VerticalRangeToExpression>
+					<VerticalRangeToExpression><![CDATA[20]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[1]]></HorizontalRangeFromExpression>
 					<HorizontalRangeToExpression><![CDATA[31]]></HorizontalRangeToExpression>
 					<Envelope>0.25</Envelope>
@@ -8404,6 +8404,28 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 			</AnalysisData>
 
 			<Presentation>
+				<Rectangle>
+					<Id>1655971714686</Id>
+					<Name><![CDATA[rectangle2]]></Name>
+					<X>330</X><Y>150</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>210</Width>
+					<Height>70</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-657931</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
 				<Text>
 					<Id>1654936341105</Id>
 					<Name><![CDATA[text]]></Name>
@@ -8428,7 +8450,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Text>
 					<Id>1654936341106</Id>
 					<Name><![CDATA[text1]]></Name>
-					<X>50</X><Y>130</Y>
+					<X>340</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8449,7 +8471,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Text>
 					<Id>1654936341107</Id>
 					<Name><![CDATA[text2]]></Name>
-					<X>240</X><Y>130</Y>
+					<X>530</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8472,7 +8494,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Rectangle>
 					<Id>1654936341108</Id>
 					<Name><![CDATA[rectangle]]></Name>
-					<X>40</X><Y>150</Y>
+					<X>60</X><Y>150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8486,7 +8508,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
 					<Width>210</Width>
-					<Height>30</Height>
+					<Height>110</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-657931</FillColor>
 					<FillMaterial>null</FillMaterial>
@@ -8494,7 +8516,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Text>
 					<Id>1654936341109</Id>
 					<Name><![CDATA[text3]]></Name>
-					<X>50</X><Y>160</Y>
+					<X>340</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8515,7 +8537,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Text>
 					<Id>1654936341110</Id>
 					<Name><![CDATA[text4]]></Name>
-					<X>240</X><Y>160</Y>
+					<X>530</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8537,7 +8559,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Text>
 					<Id>1654936341111</Id>
 					<Name><![CDATA[text5]]></Name>
-					<X>50</X><Y>190</Y>
+					<X>70</X><Y>130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8558,7 +8580,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Line>
 					<Id>1654936341112</Id>
 					<Name><![CDATA[line]]></Name>
-					<X>40</X><Y>210</Y>
+					<X>60</X><Y>150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8582,7 +8604,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Text>
 					<Id>1654936341113</Id>
 					<Name><![CDATA[text6]]></Name>
-					<X>50</X><Y>230</Y>
+					<X>70</X><Y>170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8603,7 +8625,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Text>
 					<Id>1654936341114</Id>
 					<Name><![CDATA[text7]]></Name>
-					<X>240</X><Y>230</Y>
+					<X>260</X><Y>170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8623,32 +8645,10 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 					</Font>
 					<Alignment>RIGHT</Alignment>
 				</Text>
-				<Rectangle>
-					<Id>1654936341115</Id>
-					<Name><![CDATA[rectangle1]]></Name>
-					<X>40</X><Y>250</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<ZHeight>10</ZHeight>
-					<LineWidth>1</LineWidth>
-					<LineColor/>
-					<LineMaterial>null</LineMaterial>
-					<LineStyle>SOLID</LineStyle>
-					<Width>210</Width>
-					<Height>30</Height>
-					<Rotation>0.0</Rotation>
-					<FillColor>-657931</FillColor>
-					<FillMaterial>null</FillMaterial>
-				</Rectangle>
 				<Text>
 					<Id>1654936341116</Id>
 					<Name><![CDATA[text8]]></Name>
-					<X>50</X><Y>260</Y>
+					<X>70</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8669,7 +8669,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Text>
 					<Id>1654936341117</Id>
 					<Name><![CDATA[text9]]></Name>
-					<X>240</X><Y>260</Y>
+					<X>260</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8692,7 +8692,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Text>
 					<Id>1654936341118</Id>
 					<Name><![CDATA[text10]]></Name>
-					<X>50</X><Y>290</Y>
+					<X>70</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8713,7 +8713,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 				<Text>
 					<Id>1654936341119</Id>
 					<Name><![CDATA[text11]]></Name>
-					<X>240</X><Y>290</Y>
+					<X>260</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8736,7 +8736,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
     			<Histogram2D>
 					<Id>1654937769655</Id>
 					<Name><![CDATA[chart]]></Name>
-					<X>300</X><Y>100</Y>
+					<X>350</X><Y>290</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8754,18 +8754,18 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>382.5</Width>
-					<Height>270</Height>
+					<Width>360</Width>
+					<Height>260</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
-						<YOffset>30</YOffset>
-						<Width>302.5</Width>
+						<YOffset>20</YOffset>
+						<Width>280</Width>
 						<Height>180</Height>
 						<BackgroundColor/>
 						<BorderColor>-16777216</BorderColor>
-						<GridColor>-12566464</GridColor>
+						<GridColor/>
 					</ChartArea>
 					<Legend>
 						<Place>SOUTH</Place>
@@ -8782,7 +8782,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 					<HistogramDataExpression>
 					<Id>0</Id>
 					<Expression><![CDATA[dataProfit2D]]></Expression>
-					<Color>-12490271</Color>
+					<Color>-16777077</Color>
 					<Expression2><![CDATA[0]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>  
 							<Title><![CDATA[Total profits per number of visitors per minute]]></Title>
@@ -8813,7 +8813,7 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
     			<Histogram2D>
 					<Id>1654941818297</Id>
 					<Name><![CDATA[chart1]]></Name>
-					<X>300</X><Y>370</Y>
+					<X>10</X><Y>280</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8831,18 +8831,18 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 						<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>382.5</Width>
+					<Width>360</Width>
 					<Height>270</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>302.5</Width>
+						<Width>280</Width>
 						<Height>180</Height>
-						<BackgroundColor>-1</BackgroundColor>
+						<BackgroundColor/>
 						<BorderColor>-16777216</BorderColor>
-						<GridColor>-12566464</GridColor>
+						<GridColor/>
 					</ChartArea>
 					<Legend>
 						<Place>SOUTH</Place>
@@ -8859,12 +8859,57 @@ currentSimulationNumber += 1;]]></AfterSimulationRunCode>
 					<HistogramDataExpression>
 					<Id>1654941818294</Id>
 					<Expression><![CDATA[dataProfitVisitor2D]]></Expression>
-					<Color>-13726889</Color>
+					<Color>-16751616</Color>
 					<Expression2><![CDATA[0]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>  
 							<Title><![CDATA[Profits per visitor per number of visitors per minute]]></Title>
 					</HistogramDataExpression>
     			</Histogram2D>
+				<Text>
+					<Id>1655971756523</Id>
+					<Name><![CDATA[text12]]></Name>
+					<X>340</X><Y>130</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-12566464</Color>
+					<Text><![CDATA[Simulation]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>12</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Line>
+					<Id>1655971756526</Id>
+					<Name><![CDATA[line1]]></Name>
+					<X>330</X><Y>150</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>2</LineWidth>
+					<LineColor>-12566464</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<Dx>210</Dx>
+					<Dy>0</Dy>
+					<Dz>0</Dz>
+				</Line>
 			</Presentation>
 
 			<AfterIterationCode><![CDATA[experimentSeedIteration += 1;]]></AfterIterationCode>
